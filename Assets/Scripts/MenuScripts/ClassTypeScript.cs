@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,7 @@ public class ClassTypeScript : MonoBehaviour
         menuManager.practicalSelected = false;
         menuManager.collegeSelected = false;
         menuManager.groupSelected = false;
+        menuManager.typeSelected = true;
     }
 
     public void SelectPractical()
@@ -30,6 +32,7 @@ public class ClassTypeScript : MonoBehaviour
         menuManager.practicalSelected = true;
         menuManager.collegeSelected = false;
         menuManager.groupSelected = false;
+        menuManager.typeSelected = true;
     }
 
     public void SelectCollege()
@@ -39,6 +42,7 @@ public class ClassTypeScript : MonoBehaviour
         menuManager.practicalSelected = false;
         menuManager.collegeSelected = true;
         menuManager.groupSelected = false;
+        menuManager.typeSelected = true;
     }
 
     public void SelectGroup()
@@ -48,6 +52,7 @@ public class ClassTypeScript : MonoBehaviour
         menuManager.practicalSelected = false;
         menuManager.collegeSelected = false;
         menuManager.groupSelected = true;
+        menuManager.typeSelected = true;
     }
 
     public void BackToTitle()
@@ -58,8 +63,12 @@ public class ClassTypeScript : MonoBehaviour
 
     public void ForwardToLayout()
     {
-        titleScreen.SetActive(false);
-        classTypeScreen.SetActive(false);
-        layoutScreen.SetActive(true);
+        if (menuManager.typeSelected)
+        {
+            titleScreen.SetActive(false);
+            classTypeScreen.SetActive(false);
+            layoutScreen.SetActive(true);
+        }
+        // else show error text
     }
 }

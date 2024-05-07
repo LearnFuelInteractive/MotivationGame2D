@@ -15,6 +15,7 @@ public class ClassLayoutScript : MonoBehaviour
         menuManager.normalLayoutSelected = true;
         menuManager.groupedLayoutSelected = false;
         menuManager.spacedLayoutSelected = false;
+        menuManager.layoutSelected = true;
     }
 
     public void SelectGrouped()
@@ -23,6 +24,7 @@ public class ClassLayoutScript : MonoBehaviour
         menuManager.normalLayoutSelected = false;
         menuManager.groupedLayoutSelected = true;
         menuManager.spacedLayoutSelected = false;
+        menuManager.layoutSelected = true;
     }
 
     public void SelectSpaced()
@@ -31,6 +33,7 @@ public class ClassLayoutScript : MonoBehaviour
         menuManager.normalLayoutSelected = false;
         menuManager.groupedLayoutSelected = false;
         menuManager.spacedLayoutSelected = true;
+        menuManager.layoutSelected = true;
     }
 
     public void BackToType()
@@ -41,9 +44,13 @@ public class ClassLayoutScript : MonoBehaviour
 
     public void ForwardToModifiers()
     {
-        titleScreen.SetActive(false);
-        classTypeScreen.SetActive(false);
-        layoutScreen.SetActive(false);
-        modifiersScreen.SetActive(true);
+        if (menuManager.layoutSelected)
+        {
+            titleScreen.SetActive(false);
+            classTypeScreen.SetActive(false);
+            layoutScreen.SetActive(false);
+            modifiersScreen.SetActive(true);
+        }
+        // else show error message
     }
 }
