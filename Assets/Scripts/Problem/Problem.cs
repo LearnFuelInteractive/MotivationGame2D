@@ -24,12 +24,11 @@ public class Problem : MonoBehaviour, IProblem
 
     private void OnMouseExit()
     {
-        HideProblem();
+        // HideProblem();
     }
 
     public void Affect()
     {
-        throw new System.NotImplementedException();
     }
 
     public void Click()

@@ -8,17 +8,7 @@ public class Popup : MonoBehaviour
     public GameObject popUp;
     public Problem problemAction;
 
-    // Contains problem
-    // Contains player
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-    // Update is called once per frame
-    void Update()
-    {  
-    }
+    // Will have some relation back to the student.
 
     public void ShowPopup()
     {
@@ -33,6 +23,12 @@ public class Popup : MonoBehaviour
     // Shows message screen with button
     public void OnMouseDown()
     {
+        problemAction.ShowProblem();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Other people triggered popup.");
         problemAction.ShowProblem();
     }
 }
