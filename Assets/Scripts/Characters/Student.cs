@@ -16,7 +16,6 @@ namespace Assets.Scripts.Characters
 
         private void Start()
         {
-          SpawnPopup();
         }
 
         public override void ApplySolution(ASolution solution)
@@ -40,7 +39,6 @@ namespace Assets.Scripts.Characters
         public override void SpawnPopup()
         {
             // Spawns in a popup with the correct data to it.
-
             GameObject copy = Instantiate(popup, ProblemPopup.position, Quaternion.identity);
             var problemPopUp = copy.GetComponent<ProblemPopup>();
             if (problemPopUp != null)
