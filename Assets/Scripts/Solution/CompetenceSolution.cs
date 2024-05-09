@@ -10,7 +10,6 @@ namespace Assets.Scripts.Solution
 {
     public class CompetenceSolution : ASolution
     {
-        
         public void OnMouseDown()
         {
             // This will decide if an solution is a global solution or individual action.
@@ -35,7 +34,7 @@ namespace Assets.Scripts.Solution
         public override void ApplyToProblem(Problem problem)
         {
             // Get Character relevant to problem
-            GodCharacter godCharacter = problem.RelevantStudent;
+            Student godCharacter = problem.RelevantStudent;
             // Get type of problem information.
             Debug.Log("Fill in problem type");
             // Solve the problem.
@@ -45,7 +44,7 @@ namespace Assets.Scripts.Solution
 
         // Apply the effects of the solution to the character
         // Works with both individual and global actions.
-        public override bool SolveProblem(GodCharacter character)
+        public override bool SolveProblem(Student character)
         {
             // Picks the relevant modifier
             float improvedCompetence = character.problemMeter - competenceGrade;
@@ -55,7 +54,7 @@ namespace Assets.Scripts.Solution
             // Calculate chance, replace number with relevant script.
             var randomNumber = 2;
             // Validate acceptance criteria;
-            var acceptanceCriteria = character.acceptanceCriteria;
+            var acceptanceCriteria = character.AcceptanceCriteria;
             // If successfull, destroy popup.
             var validSolution = CheckAcceptanceCriteria(acceptanceCriteria, randomNumber);
             // Apply modifier as new value to persona.

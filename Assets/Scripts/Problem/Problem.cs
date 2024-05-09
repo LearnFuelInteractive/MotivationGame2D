@@ -11,7 +11,7 @@ public class Problem : MonoBehaviour, IProblem
     public GameObject ProblemIcon;
     public string ProblemName = "Default problem";
 
-    public GodCharacter RelevantStudent;
+    public Student RelevantStudent;
 
     // Start is called before the first frame update
     void Start()

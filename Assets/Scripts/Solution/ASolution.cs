@@ -1,4 +1,5 @@
 using Assets.Scripts.Characters;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,7 +21,7 @@ public abstract class ASolution : MonoBehaviour
     public virtual void ApplyToProblem(Problem problem)
     {
         // Get Character relevant to problem
-        GodCharacter godCharacter = problem.RelevantStudent;
+        Student godCharacter = problem.RelevantStudent;
         // Get type of problem information.
         Debug.Log(problem.ProblemType());
         // Solve the problem.
@@ -28,7 +29,8 @@ public abstract class ASolution : MonoBehaviour
     }
 
     // Apply the effects of the solution to the character
-    public abstract bool SolveProblem(GodCharacter character);
+    public abstract bool SolveProblem(Student character);
     public abstract bool CheckAcceptanceCriteria(float acceptanceCriteria, float value);
     public abstract void ConfirmAction();
+
 }

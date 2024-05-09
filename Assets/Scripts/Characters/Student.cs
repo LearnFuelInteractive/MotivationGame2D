@@ -7,14 +7,14 @@ using UnityEngine;
 
 namespace Assets.Scripts.Characters
 {
-    public class GodCharacter: MonoBehaviour
+    public class Student : Character
     {
         public GameObject popup;
         public Problem currentProblem;
         public float problemMeter = 40;
-        public float acceptanceCriteria = 0;
+        public float AcceptanceCriteria = 0;
 
-        public void ApplySolution(ASolution solution)
+        public override void ApplySolution(ASolution solution)
         {
             var answer = solution.SolveProblem(this);
 
@@ -24,6 +24,16 @@ namespace Assets.Scripts.Characters
                 Debug.Log("Problem has solved");
                 Destroy(popup);
             }
+        }
+
+        public override void Respond()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SpawnPopup()
+        {
+            throw new NotImplementedException();
         }
     }
 }
