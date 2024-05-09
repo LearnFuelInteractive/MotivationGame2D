@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ModifierScript : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class ModifierScript : MonoBehaviour
         classTypeScreen.SetActive(false);
         layoutScreen.SetActive(false);
         modifiersScreen.SetActive(false);
+        SceneManager.LoadScene("ClassroomScene");
     }
 
     public void SelectKahoot()
