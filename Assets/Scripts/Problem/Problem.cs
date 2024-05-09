@@ -30,6 +30,11 @@ public class Problem : MonoBehaviour, IProblem
         // HideProblem();
     }
 
+    public string ProblemType()
+    {
+        return "There is a problem";
+    }
+
     public void Affect()
     {
     }
