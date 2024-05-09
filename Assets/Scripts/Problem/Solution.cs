@@ -22,6 +22,18 @@ public class LessonSolution : MonoBehaviour
         Debug.Log("Hello world");
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
+
+
+
     public void OnMouseDown()
     {
         confirmChoice.Invoke();
