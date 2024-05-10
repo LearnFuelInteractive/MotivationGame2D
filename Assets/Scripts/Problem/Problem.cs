@@ -1,3 +1,4 @@
+using Assets.Scripts.Characters;
 using Assets.Scripts.Popup;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ public class Problem : MonoBehaviour, IProblem
     public GameObject ProblemScreen;
     public GameObject ProblemIcon;
     public string ProblemName = "Default problem";
+
+    public Student RelevantStudent;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,11 @@ public class Problem : MonoBehaviour, IProblem
     private void OnMouseExit()
     {
         // HideProblem();
+    }
+
+    public string ProblemType()
+    {
+        return "There is a problem";
     }
 
     public void Affect()
