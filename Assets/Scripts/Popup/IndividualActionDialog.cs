@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using Assets.Scripts.ProblemClass;
+using System.Collections.Generic;
 
 namespace Assets.Scripts.Popup
 {
@@ -16,7 +17,7 @@ namespace Assets.Scripts.Popup
         public Student student;
 
         // Optional: the class itself instantiates the solution buttons within the dialog.
-        // public List<ASolution> solutions;
+        public List<ASolution> solutions;
 
         // Only for Individual action: The problem this dialog is called upon
         // Optional: The student to which a solution needs to be applied upon.
@@ -37,6 +38,7 @@ namespace Assets.Scripts.Popup
             Debug.Log("Dialog individual action opened.");
             // Should also process problem and student.
             IndividualActionBar.SetActive(true);
+            UpdateSolution();
             ChangeText();
         }
 
@@ -44,6 +46,11 @@ namespace Assets.Scripts.Popup
         {
             Debug.Log("Dialog individual action closed.");
             IndividualActionBar.SetActive(false);
+        }
+
+        public void UpdateSolution()
+        {
+            solutions.ForEach(s => s.TargetedStudent = student);
         }
 
         public void ChangeText()
