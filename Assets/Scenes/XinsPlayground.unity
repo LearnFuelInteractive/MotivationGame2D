@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &377902699 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6402109570090816598, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-  m_PrefabInstance: {fileID: 1487741943084421374}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543889179
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +155,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2118681780}
-  - {fileID: 563434052}
   m_Father: {fileID: 2056296210}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &543889181
@@ -230,15 +224,10 @@ MonoBehaviour:
   character: {fileID: 543889179}
   ProblemPopup: {fileID: 2118681780}
   Name: Dave
-  popup: {fileID: 377902699}
-  currentProblem: {fileID: 645287219}
+  popup: {fileID: 6402109570090816598, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
+  currentProblem: {fileID: 0}
   problemMeter: 40
   AcceptanceCriteria: 0
---- !u!4 &563434052 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-  m_PrefabInstance: {fileID: 1487741943084421374}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &609963522
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,17 +312,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &645287219 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1804359727396345494, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-  m_PrefabInstance: {fileID: 1487741943084421374}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50301d24fa86c22459f1ed14731bf950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1021120087
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,115 +626,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543889180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1487741943084421374
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 543889180}
-    m_Modifications:
-    - target: {fileID: 149349797895894744, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Name
-      value: SolutionButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 849417658369382069, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.120888196
-      objectReference: {fileID: 0}
-    - target: {fileID: 849417658369382069, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1625508
-      objectReference: {fileID: 0}
-    - target: {fileID: 849417658369382069, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.288
-      objectReference: {fileID: 0}
-    - target: {fileID: 849417658369382069, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.264
-      objectReference: {fileID: 0}
-    - target: {fileID: 1804359727396345494, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: RelevantStudent
-      value: 
-      objectReference: {fileID: 543889182}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355362309426413809, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5837519009339945420, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 5837519009339945420, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402109570090816598, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Name
-      value: Popup
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830329198027364314, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 89930da27dfbbc64ba1f3baf0ae416bb, type: 3}
-    - target: {fileID: 8830329198027364314, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Color.b
-      value: 0.019583702
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830329198027364314, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830329198027364314, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8882413794899510011, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
-      propertyPath: m_Name
-      value: ProblemPopup
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

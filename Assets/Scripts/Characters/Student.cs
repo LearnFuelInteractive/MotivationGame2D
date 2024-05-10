@@ -16,6 +16,7 @@ namespace Assets.Scripts.Characters
 
         private void Start()
         {
+            SpawnPopup();
         }
 
         public override void ApplySolution(ASolution solution)

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3627883087478516032}
+  - component: {fileID: 4851298946287486204}
   m_Layer: 0
   m_Name: StudentDeskSide
   m_TagString: Untagged
@@ -31,8 +32,28 @@ Transform:
   m_Children:
   - {fileID: 5920233903789670834}
   - {fileID: 5123324759826529227}
+  - {fileID: 3523618114162023493}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &4851298946287486204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039437600831883245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41ffcead764aca41b8ae9e05f70f597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 2039437600831883245}
+  ProblemPopup: {fileID: 3523618114162023493}
+  Name: Ingrid
+  popup: {fileID: 6402109570090816598, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
+  currentProblem: {fileID: 0}
+  problemMeter: 40
+  AcceptanceCriteria: 0
 --- !u!1 &3145623065653407060
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 418898960, guid: 2d0b0601378e40a44b687e1e2d7b8355, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -223,3 +244,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3870265244170966364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3523618114162023493}
+  m_Layer: 0
+  m_Name: PopupSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3523618114162023493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870265244170966364}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3627883087478516032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
