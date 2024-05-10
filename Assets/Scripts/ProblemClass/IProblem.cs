@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Popup
+namespace Assets.Scripts.ProblemClass
 {
     public interface IProblem
     {
-        void Click();
-        void ShowProblem();
-        void HideProblem();
         void Affect();
     }
 }

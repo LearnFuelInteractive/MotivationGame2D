@@ -2,6 +2,7 @@ using Assets.Scripts.Characters;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Assets.Scripts.ProblemClass;
 
 public abstract class ASolution : MonoBehaviour
 {

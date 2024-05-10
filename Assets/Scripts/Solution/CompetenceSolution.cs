@@ -1,10 +1,7 @@
 ﻿using Assets.Scripts.Characters;
-using Assets.Scripts.Popup;
+using Assets.Scripts.ProblemClass;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Assets.Scripts.Solution
 {

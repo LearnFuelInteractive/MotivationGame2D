@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GroupClassLayout
   - NormalClassLayout
+  - ActionBar
   layers:
   - Default
   - TransparentFX

@@ -1,12 +1,21 @@
+using Assets.Scripts.Characters;
+using Assets.Scripts.Popup;
+using Assets.Scripts.ProblemClass;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ProblemPopup : MonoBehaviour
+public class ProblemPopup : MonoBehaviour, IPointerClickHandler
 {
     // Contains popup object
     public GameObject popUp;
-    public Problem problemAction;
+
+    // public Problem problemAction;
+    public Student originStudent;
+
+    // Later variables will ensure that only if the student has been touched, that the popup will be clickable.
+    public ProblemManager problemManager;
 
     // Will have some relation back to the student.
 
@@ -20,15 +29,12 @@ public class ProblemPopup : MonoBehaviour
         popUp.SetActive(false);
     }
 
-    // Shows message screen with button
-    public void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        problemAction.ShowProblem();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Other people triggered popup.");
-        problemAction.ShowProblem();
+        // This should open individual action dialog
+        Debug.Log("Individual action: Open dialog.");
+        ActionDialog dialog = problemManager.GetIndividualDialog();
+        dialog.student = originStudent;
+        dialog.OpenDialog();
     }
 }

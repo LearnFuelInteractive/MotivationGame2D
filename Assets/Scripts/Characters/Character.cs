@@ -12,7 +12,7 @@ namespace Assets.Scripts.Characters
         // Personage.
         public GameObject character;
         // SpawnPoint
-        public Transform ProblemPopup;
+        public Transform spawnPoint;
 
         public string Name;
 
