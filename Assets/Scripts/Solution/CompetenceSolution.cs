@@ -7,11 +7,6 @@ namespace Assets.Scripts.Solution
 {
     public class CompetenceSolution : ASolution
     {
-        public void OnMouseDown()
-        {
-            
-        }
-
         public void SelectSolution()
         {
             // This will decide if an solution is a global solution or individual action.
