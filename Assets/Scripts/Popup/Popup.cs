@@ -6,28 +6,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ProblemPopup : MonoBehaviour, IPointerClickHandler
+public class ProblemPopup : IPopup, IPointerClickHandler
 {
-    // Contains popup object
-    public GameObject popUp;
-
-    // public Problem problemAction;
+    // Will have some relation back to the student.
     public Student originStudent;
 
+    // Temp variable, will be replaced with a service locator to the ProblemManager.
     // Later variables will ensure that only if the student has been touched, that the popup will be clickable.
     public ProblemManager problemManager;
-
-    // Will have some relation back to the student.
-
-    public void ShowPopup()
-    {
-        popUp.SetActive(true);
-    }
-
-    public void HidePopup()
-    {
-        popUp.SetActive(false);
-    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -35,6 +21,6 @@ public class ProblemPopup : MonoBehaviour, IPointerClickHandler
         Debug.Log("Individual action: Open dialog.");
         ActionDialog dialog = problemManager.GetIndividualDialog();
         dialog.student = originStudent;
-        dialog.OpenDialog();
+        dialog.ShowPopup();
     }
 }

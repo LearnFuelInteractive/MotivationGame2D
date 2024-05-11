@@ -54,6 +54,7 @@ namespace Assets.Scripts.Characters
 
         public override void SpawnPopup()
         {
+            // Will be later replaced by a factory pattern.
             // Spawns in a popup with the correct data to it.
             GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
             // Puts game object under spawn point
