@@ -6,6 +6,7 @@ public class ClassLayoutScript : MonoBehaviour
     public GameObject classTypeScreen;
     public GameObject layoutScreen;
     public GameObject modifiersScreen;
+    private string selectedClassLayoutKey = "SelectedClassLayout";
 
     public MenuManager menuManager;
 
@@ -16,6 +17,7 @@ public class ClassLayoutScript : MonoBehaviour
         menuManager.groupedLayoutSelected = false;
         menuManager.spacedLayoutSelected = false;
         menuManager.layoutSelected = true;
+        PlayerPrefs.SetString(selectedClassLayoutKey, "NormalClassLayout");
     }
 
     public void SelectGrouped()
@@ -25,6 +27,7 @@ public class ClassLayoutScript : MonoBehaviour
         menuManager.groupedLayoutSelected = true;
         menuManager.spacedLayoutSelected = false;
         menuManager.layoutSelected = true;
+        PlayerPrefs.SetString(selectedClassLayoutKey, "GroupClassLayout");
     }
 
     public void SelectSpaced()
