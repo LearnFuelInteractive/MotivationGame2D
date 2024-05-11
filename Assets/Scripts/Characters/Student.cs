@@ -9,6 +9,7 @@ namespace Assets.Scripts.Characters
 {
     public class Student : Character
     {
+        public Persona persona;
         public GameObject popup;
         public Problem currentProblem;
         public float problemMeter = 40;
@@ -17,6 +18,7 @@ namespace Assets.Scripts.Characters
         private void Start()
         {
             SpawnPopup();
+            this.persona = RandomPersonaGenerator.GenerateRandomPersona();
         }
 
         public override void ApplySolution(ASolution solution)
