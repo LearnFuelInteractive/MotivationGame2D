@@ -1095,6 +1095,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndividualActionButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6509214654007044505, guid: ffc72b955fc637b4bbb99a59787612b9, type: 3}
+      propertyPath: confirmChoice.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1719373835}
+    - target: {fileID: 6509214654007044505, guid: ffc72b955fc637b4bbb99a59787612b9, type: 3}
+      propertyPath: confirmChoice.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopup
+      objectReference: {fileID: 0}
     - target: {fileID: 7882532380549895850, guid: ffc72b955fc637b4bbb99a59787612b9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1267,6 +1275,14 @@ PrefabInstance:
     - target: {fileID: 1974467987710025458, guid: 908a5ebc39026e24c8f5e2df25f27a73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195226412134801857, guid: 908a5ebc39026e24c8f5e2df25f27a73, type: 3}
+      propertyPath: confirmChoice.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1719373835}
+    - target: {fileID: 3195226412134801857, guid: 908a5ebc39026e24c8f5e2df25f27a73, type: 3}
+      propertyPath: confirmChoice.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePopup
       objectReference: {fileID: 0}
     - target: {fileID: 3591511713791696925, guid: 908a5ebc39026e24c8f5e2df25f27a73, type: 3}
       propertyPath: m_Name
