@@ -56,18 +56,28 @@ namespace Assets.Scripts.Characters
         {
             // Will be later replaced by a factory pattern.
             // Spawns in a popup with the correct data to it.
-            GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
-            // Puts game object under spawn point
-            spawnedPopup.transform.SetParent(spawnPoint.transform);
 
-            var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
-            if (problemPopUp != null)
+            // Assigns problem to student.
+            Problem problem = problemManager.GenerateRandomProblem();
+            // Also temporary solution, will need to be integrated in problem manager.
+            AssignProblem(problem);
+            
+            if(problem != null)
             {
-                problemPopUp.originStudent = this;
-                problemPopUp.problemManager = problemManager;
+                GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
+                // Puts game object under spawn point
+                spawnedPopup.transform.SetParent(spawnPoint.transform);
 
-                popup = spawnedPopup;
+                var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
+                if (problemPopUp != null)
+                {
+                    problemPopUp.originStudent = this;
+                    problemPopUp.problemManager = problemManager;
+
+                    popup = spawnedPopup;
+                }
             }
+            
         }
     }
 }

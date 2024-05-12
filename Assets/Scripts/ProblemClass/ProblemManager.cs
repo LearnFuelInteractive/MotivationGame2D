@@ -11,11 +11,19 @@ namespace Assets.Scripts.ProblemClass
     public class ProblemManager: MonoBehaviour
     {
         public ActionDialog IndividualDialog;
+
+        public List<Problem> ProblemList;
         
 
         public ActionDialog GetIndividualDialog()
         {
             return IndividualDialog;
+        }
+
+        public Problem GenerateRandomProblem()
+        {
+            // Temp solution, will be replaced with random generated problem
+            return ProblemList.First();
         }
     }
 }
