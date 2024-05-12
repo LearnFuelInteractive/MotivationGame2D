@@ -10,6 +10,7 @@ namespace Assets.Scripts.Popup
 {
     public abstract class IActionDialog: IPopup
     {
+        // P.S. Voeg in Unity, handmatig alle problemen toepasbaar voor het level.
         public List<ASolution> solutions;
         // Contains all solutions in one place.
         public abstract void UpdateSolution();
