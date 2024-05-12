@@ -482,7 +482,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2350025421434431747, guid: 99807da84b0973340a5c4446d669e0fa, type: 3}
       propertyPath: m_Name
-      value: Problem
+      value: DefaultProblem
       objectReference: {fileID: 0}
     - target: {fileID: 5516099386558375812, guid: 99807da84b0973340a5c4446d669e0fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -538,6 +538,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5516099386558375812, guid: 99807da84b0973340a5c4446d669e0fa, type: 3}
   m_PrefabInstance: {fileID: 1637066393}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1637066395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7415596462660199646, guid: 99807da84b0973340a5c4446d669e0fa, type: 3}
+  m_PrefabInstance: {fileID: 1637066393}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50301d24fa86c22459f1ed14731bf950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1683830134
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +921,7 @@ PrefabInstance:
     - target: {fileID: 1257943813135182407, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
       propertyPath: ProblemList.Array.data[0]
       value: 
-      objectReference: {fileID: 7415596462660199646, guid: 99807da84b0973340a5c4446d669e0fa, type: 3}
+      objectReference: {fileID: 1637066395}
     - target: {fileID: 3884342054105391856, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
       propertyPath: m_Name
       value: ProblemManager
