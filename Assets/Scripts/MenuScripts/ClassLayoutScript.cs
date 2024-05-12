@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ClassLayoutScript : MonoBehaviour
 {
-    public GameObject titleScreen;
     public GameObject classTypeScreen;
     public GameObject layoutScreen;
     public GameObject modifiersScreen;
@@ -12,42 +11,31 @@ public class ClassLayoutScript : MonoBehaviour
     public void SelectNormal()
     {
         Debug.Log("Normal");
-        menuManager.normalLayoutSelected = true;
-        menuManager.groupedLayoutSelected = false;
-        menuManager.spacedLayoutSelected = false;
-        menuManager.layoutSelected = true;
+        menuManager.classLayout = 1;
     }
 
     public void SelectGrouped()
     {
         Debug.Log("Grouped");
-        menuManager.normalLayoutSelected = false;
-        menuManager.groupedLayoutSelected = true;
-        menuManager.spacedLayoutSelected = false;
-        menuManager.layoutSelected = true;
+        menuManager.classLayout = 2;
     }
 
     public void SelectSpaced()
     {
         Debug.Log("Spaced");
-        menuManager.normalLayoutSelected = false;
-        menuManager.groupedLayoutSelected = false;
-        menuManager.spacedLayoutSelected = true;
-        menuManager.layoutSelected = true;
+        menuManager.classLayout = 3;
     }
 
     public void BackToType()
     {
-        titleScreen.SetActive(true);
-        classTypeScreen.SetActive(false);
+        classTypeScreen.SetActive(true);
+        layoutScreen.SetActive(false);
     }
 
     public void ForwardToModifiers()
     {
-        if (menuManager.layoutSelected)
+        if (menuManager.classLayout != 0)
         {
-            titleScreen.SetActive(false);
-            classTypeScreen.SetActive(false);
             layoutScreen.SetActive(false);
             modifiersScreen.SetActive(true);
         }
