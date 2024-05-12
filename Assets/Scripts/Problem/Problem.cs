@@ -10,6 +10,7 @@ public class Problem : MonoBehaviour, IProblem
     public GameObject ProblemScreen;
     public GameObject ProblemIcon;
     public string ProblemName = "Default problem";
+    public ProblemTypeEnum typeOfProblem;
 
     public Student RelevantStudent;
 
@@ -53,6 +54,13 @@ public class Problem : MonoBehaviour, IProblem
     public void ShowProblem()
     {
         ProblemScreen.SetActive(true);
+    }
+
+    public enum ProblemTypeEnum
+    {
+        Autonomy,
+        Competency,
+        Connection
     }
 
 }

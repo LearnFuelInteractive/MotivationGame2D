@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4851298946287486204}
   m_Layer: 0
   m_Name: StudentDeskSide
-  m_TagString: Untagged
+  m_TagString: Student
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +50,7 @@ MonoBehaviour:
   character: {fileID: 2039437600831883245}
   ProblemPopup: {fileID: 3523618114162023493}
   Name: Ingrid
+  persona: {fileID: 0}
   popup: {fileID: 6402109570090816598, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
   currentProblem: {fileID: 0}
   problemMeter: 40

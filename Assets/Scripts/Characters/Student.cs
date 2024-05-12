@@ -17,7 +17,7 @@ namespace Assets.Scripts.Characters
 
         private void Start()
         {
-            SpawnPopup();
+            //SpawnPopup();
             this.persona = RandomPersonaGenerator.GenerateRandomPersona();
         }
 
@@ -52,6 +52,11 @@ namespace Assets.Scripts.Characters
                 copy.transform.SetParent(ProblemPopup.transform);
                 popup = copy;
             }
+        }
+
+        public void AssignProblem(Problem problem)
+        {
+            this.currentProblem = problem;
         }
     }
 }
