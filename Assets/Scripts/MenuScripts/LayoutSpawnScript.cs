@@ -12,7 +12,7 @@ public class LayoutSpawnScript : MonoBehaviour
     void Start()
     {
         var selectedLayout = PlayerPrefs.GetString(selectedClassLayoutKey);
-        Instantiate(GetGameObjectWithRightTagFromList(selectedLayout, classLayouts), transform.position, Quaternion.identity);
+      //  Instantiate(GetGameObjectWithRightTagFromList(selectedLayout, classLayouts), transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame
