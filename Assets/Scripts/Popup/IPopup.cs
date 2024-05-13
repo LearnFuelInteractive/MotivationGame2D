@@ -16,12 +16,14 @@ namespace Assets.Scripts.Popup
         public virtual void ShowPopup()
         {
             popUp.SetActive(true);
+
         }
 
         public virtual void HidePopup()
         {
             // These methods are virtual in case the implementation needs to differ.
             popUp.SetActive(false);
+
         }
     }
 }
