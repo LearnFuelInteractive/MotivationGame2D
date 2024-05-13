@@ -2,11 +2,12 @@
 using Assets.Scripts.ProblemClass;
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Characters
 {
-    public class Student : Character, IPointerClickHandler
+    public class Student : Character
     {
         // Will be handled later by a manager.
         public GameObject popup;
@@ -20,7 +21,8 @@ namespace Assets.Scripts.Characters
         public float AcceptanceCriteria = 0;
 
         public Student originStudent;
-        public ActionDialog dialog;
+        public UnityEvent removeDialog;
+        public bool isInRange = false;
 
         private void Start()
         {
@@ -84,8 +86,8 @@ namespace Assets.Scripts.Characters
             }
             
         }
-        public bool isInRange = false;
-
+   
+     
         public void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("Player"))
@@ -100,28 +102,15 @@ namespace Assets.Scripts.Characters
             if (collision.gameObject.CompareTag("Player"))
             {
                 isInRange = false;
-                dialog.HidePopup();
+                // get script of popup gameobject and call the method hidepopup
+                removeDialog.Invoke();
+                
             }
         }
 
-
-       
-
-        public void OnPointerClick(PointerEventData eventData)
+        public bool IsInRange
         {
-            Debug.Log("clickingg.");
-            // This should open individual action dialog
-            if (isInRange)
-            {
-                Debug.Log("Individual action: Open dialog.");
-                dialog = problemManager.GetIndividualDialog();
-                dialog.student = this;
-                dialog.ShowPopup();
-            }
-          
+            get => isInRange;
         }
-
-
-
     }
 }

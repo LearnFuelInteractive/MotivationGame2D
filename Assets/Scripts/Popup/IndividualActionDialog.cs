@@ -24,7 +24,7 @@ namespace Assets.Scripts.Popup
 
         private void Start()
         {
-            HidePopup();
+            
         }
 
         public override void ShowPopup()

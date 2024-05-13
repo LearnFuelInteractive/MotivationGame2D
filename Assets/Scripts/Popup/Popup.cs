@@ -9,20 +9,55 @@ using UnityEngine.EventSystems;
 public class ProblemPopup : IPopup, IPointerClickHandler
 {
     //// Will have some relation back to the student.
-    //public Student originStudent;
+    public Student originStudent;
+    
+    private ActionDialog dialog;
 
     //// Temp variable, will be replaced with a service locator to the ProblemManager.
     //// Later variables will ensure that only if the student has been touched, that the popup will be clickable.
-    //public ProblemManager problemManager;
+    public ProblemManager problemManager;
 
-    //public void OnPointerClick(PointerEventData eventData)
-    //{
-    //    // This should open individual action dialog
-    //    Debug.Log("Individual action: Open dialog.");
-    //    ActionDialog dialog = problemManager.GetIndividualDialog();
-    //    dialog.student = originStudent;
-    //    dialog.ShowPopup();
-    //}
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (originStudent == null)
+        {
+            Debug.LogError("originStudent is not initialized!");
+            return;
+        }
 
-    // I simply put this inside the Student class, the student will be clickable, not the popup.
+        if (!originStudent.isInRange)
+        {
+            Debug.Log("Student not in range");
+            return;
+        }
+
+        if (problemManager == null)
+        {
+            Debug.LogError("ProblemManager is not initialized!");
+            return;
+        }
+
+        dialog = problemManager.GetIndividualDialog();
+
+        if (dialog == null)
+        {
+            Debug.LogError("Failed to get a valid dialog from ProblemManager!");
+            return;
+        }
+
+        dialog.student = originStudent;
+        dialog.ShowPopup();
+        Debug.Log("Individual action: Open dialog.");
+    }
+
+    public void RemovePopup()
+    {
+        HidePopup();
+    }
+
+
+    
+    
+
+ 
 }
