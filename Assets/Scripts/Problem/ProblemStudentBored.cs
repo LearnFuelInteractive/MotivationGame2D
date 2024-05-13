@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Assets.Scripts.ProblemClass; 
 
 public class ProblemStudentBored : MonoBehaviour, IProblem
 {
