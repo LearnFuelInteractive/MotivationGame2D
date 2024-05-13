@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Solution.GlobalSolutions
 {
@@ -12,5 +13,19 @@ namespace Assets.Scripts.Solution.GlobalSolutions
     {
         // For now a relation to level manager.
         public IMediator Mediator;
+
+        private void Start()
+        {
+            var mediator = FindFirstObjectByType<LevelMediator>();
+            if (mediator != null)
+            {
+                Mediator = mediator;
+                Debug.Log("Mediator found");
+            }
+            else
+            {
+                Debug.Log("Mediator not found");
+            }
+        }
     }
 }
