@@ -1,13 +1,10 @@
 ﻿using Assets.Scripts.Characters;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Solution.GlobalSolutions
 {
-    public class AllPositiveGlobalAction : ASolution
+    public class AllPositiveGlobalAction : GlobalAction
     {
         
         public override bool CheckAcceptanceCriteria(float acceptanceCriteria, float value)
@@ -17,17 +14,20 @@ namespace Assets.Scripts.Solution.GlobalSolutions
 
         public override void ConfirmAction()
         {
-            throw new NotImplementedException();
+            confirmChoice.Invoke();
         }
 
         public override void SelectSolution()
         {
-            throw new NotImplementedException();
+            Mediator.ApplySolutionToStudents(this);
+            // Closes dialog.
+            ConfirmAction();
         }
 
         public override bool SolveProblem(Student character)
         {
-            throw new NotImplementedException();
+            Debug.Log("Global solution applied");
+            return true;
         }
     }
 }
