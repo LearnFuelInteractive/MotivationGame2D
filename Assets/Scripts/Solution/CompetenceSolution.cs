@@ -1,45 +1,28 @@
 ﻿using Assets.Scripts.Characters;
-using Assets.Scripts.Popup;
+using Assets.Scripts.ProblemClass;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Assets.Scripts.Solution
 {
     public class CompetenceSolution : ASolution
     {
-        public void OnMouseDown()
+        public void SelectSolution()
         {
             // This will decide if an solution is a global solution or individual action.
             if (this.HasParentProblem())
             {
                 Debug.Log($"Individual action: {Name}.");
                 // Perform character specific actions.
-                ApplyToProblem(RelevantProblem);
+                SolveProblem(TargetedStudent);
 
                 // Close popup.
                 confirmChoice.Invoke();
             }
             else
             {
-                Debug.Log($"Global action: {Name}.");
-                // Notify all users to apply this solution.
-                // Perform action with this solution to all users.
+                Debug.Log("Individual actions need a parent class");
             }
-        }
-
-        // Applies effect to
-        public override void ApplyToProblem(Problem problem)
-        {
-            // Get Character relevant to problem
-            Student godCharacter = problem.RelevantStudent;
-            // Get type of problem information.
-            Debug.Log("Fill in problem type");
-            // Solve the problem.
-            // This will require a student, in order for the individual action to work.
-            godCharacter.ApplySolution(this);
         }
 
         // Apply the effects of the solution to the character
@@ -70,7 +53,7 @@ namespace Assets.Scripts.Solution
 
         private bool HasParentProblem()
         {
-            return (RelevantProblem != null);
+            return (TargetedStudent != null);
         }
 
         public override void ConfirmAction()
