@@ -50,22 +50,13 @@ public class SummaryScript : MonoBehaviour
 
     private void ClassLayoutCheck()
     {
-        switch (menuManager.classLayout)
+        classLayout.GetComponent<Image>().sprite = menuManager.classLayout switch
         {
-            case 1:
-                classLayout.GetComponent<Image>().sprite = normalLayout;
-                break;
-            case 2:
-                classLayout.GetComponent<Image>().sprite = groupedLayout;
-                break;
-            case 3:
-                // Add this path in when sprite exists:
-                //classLayoutImage.sprite = spacedLayout;
-                break;
-            default:
-                menuManager.gameObject.SetActive(false);
-                break;
-        }
+            1 => normalLayout,
+            2 => groupedLayout,
+            3 => spacedLayout,
+            _ => normalLayout,
+        };
     }
 
     private void ModifiersCheck()

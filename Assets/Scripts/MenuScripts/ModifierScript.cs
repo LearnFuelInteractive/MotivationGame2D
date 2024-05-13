@@ -22,6 +22,8 @@ public class ModifierScript : MonoBehaviour
 
     public void SelectKahoot()
     {
-        menuManager.modifiers.Add(1);
+        if (!menuManager.modifiers.Contains(1))
+            menuManager.modifiers.Add(1);
+        // else show error message
     }
 }
