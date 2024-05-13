@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &274199131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274199133}
+  - component: {fileID: 274199132}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &274199132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274199131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4376b33b395aaee42943606b520214f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 310996793}
+--- !u!4 &274199133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274199131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5097938, y: -0.53648436, z: -1.8861884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310996793
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +180,6 @@ GameObject:
   - component: {fileID: 310996796}
   - component: {fileID: 310996795}
   - component: {fileID: 310996794}
-  - component: {fileID: 310996798}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -227,19 +271,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &310996798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310996793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4376b33b395aaee42943606b520214f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 310996793}
 --- !u!1 &575839149
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spelen
+  m_text: Verder spelen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83f3eb21e6b7d5944a77e23a24bd8a86, type: 2}
   m_sharedMaterial: {fileID: -6735035088247298474, guid: 83f3eb21e6b7d5944a77e23a24bd8a86, type: 2}
@@ -712,7 +743,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 45}
+  m_SizeDelta: {x: 250, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900899032
 MonoBehaviour:
@@ -758,9 +789,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2059880526}
-        m_TargetAssemblyTypeName: TitleScreenScript, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 274199132}
+        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -817,7 +848,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059880525}
-  - component: {fileID: 2059880526}
   m_Layer: 5
   m_Name: PauseScreen
   m_TagString: Untagged
@@ -846,20 +876,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 960, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2059880526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059880524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2277b378964c5cc4b8083b879eb2a9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleScreen: {fileID: 2059880524}
-  classTypeScreen: {fileID: 0}
 --- !u!1 &2138570323
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,3 +951,4 @@ SceneRoots:
   - {fileID: 575839152}
   - {fileID: 310996797}
   - {fileID: 2138570326}
+  - {fileID: 274199133}

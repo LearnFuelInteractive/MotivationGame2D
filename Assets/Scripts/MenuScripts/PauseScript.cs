@@ -15,12 +15,12 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && pauseScreen.activeSelf)
+        if (Input.GetKeyDown(KeyCode.P) && pauseScreen.activeSelf)
         {
             Time.timeScale = 1;
             pauseScreen.SetActive(false);
         }
-        else if (Input.GetKeyDown(KeyCode.E) && !pauseScreen.activeSelf)
+        else if (Input.GetKeyDown(KeyCode.P) && !pauseScreen.activeSelf)
         {
             Time.timeScale = 0;
             pauseScreen.SetActive(true);
