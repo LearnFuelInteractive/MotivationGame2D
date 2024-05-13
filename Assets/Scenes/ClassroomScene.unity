@@ -969,7 +969,7 @@ PrefabInstance:
     - target: {fileID: 1257943813135182407, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
       propertyPath: IndividualDialog
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7234846869503216808, guid: dbec2b2a3d9024e4f92e803736b5e75b, type: 3}
     - target: {fileID: 1257943813135182407, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
       propertyPath: ProblemList.Array.size
       value: 1

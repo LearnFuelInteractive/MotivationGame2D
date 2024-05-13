@@ -35,9 +35,9 @@ namespace Assets.Scripts.Popup
             ChangeText();
         }
 
-        public override void HidePopup()
+        public void DestoryPopup()
         {
-            base.HidePopup();
+            HidePopup();
         }
 
         public override void UpdateSolution()

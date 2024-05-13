@@ -102,9 +102,6 @@ namespace Assets.Scripts.Characters
             if (collision.gameObject.CompareTag("Player"))
             {
                 isInRange = false;
-                // get script of popup gameobject and call the method hidepopup
-                removeDialog.Invoke();
-                
             }
         }
 
