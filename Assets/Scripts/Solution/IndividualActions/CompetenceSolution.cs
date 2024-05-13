@@ -7,7 +7,7 @@ namespace Assets.Scripts.Solution
 {
     public class CompetenceSolution : ASolution
     {
-        public void SelectSolution()
+        public override void SelectSolution()
         {
             // This will decide if an solution is a global solution or individual action.
             if (this.HasParentProblem())
