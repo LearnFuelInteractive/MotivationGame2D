@@ -13,17 +13,9 @@ namespace Assets.Scripts.Popup
         private void Start()
         {
             // Default setting
-            // HidePopup();
+            HidePopup();
             // Will retrieve all global solutions of children.
             Mediator = GameObject.FindFirstObjectByType <LevelMediator>();
-            if(Mediator != null )
-            {
-                Debug.Log("Mediator found");
-            }
-            else
-            {
-                Debug.Log("Mediator not found");
-            }
         }
 
         public override void UpdateSolution()
