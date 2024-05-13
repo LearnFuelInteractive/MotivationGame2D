@@ -40,11 +40,11 @@ public class SummaryScript : MonoBehaviour
     {
         classTypeText.text = menuManager.classType switch
         {
-            1 => "- Theorie",
-            2 => "- Practicum",
-            3 => "- Hoorcollege",
-            4 => "- Groepsopdracht",
-            _ => "- Theorie",
+            1 => "-Theorie",
+            2 => "-Practicum",
+            3 => "-Hoorcollege",
+            4 => "-Groepsopdracht",
+            _ => "-Theorie",
         };
     }
 
@@ -61,15 +61,19 @@ public class SummaryScript : MonoBehaviour
 
     private void ModifiersCheck()
     {
+        if (menuManager.modifiers.Count > 0)
+        {
+            classModifiersText.text = "";
+        }
         foreach (var modifier in menuManager.modifiers)
         {
-            classModifiersText.text = modifier switch
+            classModifiersText.text += modifier switch
             {
-                1 => "- Kahoot\n",
-                2 => "- 2nd Modifier\n",
-                3 => "- 3rd Modifier\n",
-                4 => "- 4th Modifier\n",
-                _ => "- Kahoot\n",
+                1 => "-Kahoot\n",
+                2 => "-2nd Modifier\n",
+                3 => "-3rd Modifier\n",
+                4 => "-4th Modifier\n",
+                _ => "-Kahoot\n",
             };
         }
     }
