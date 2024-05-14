@@ -6,7 +6,7 @@ namespace Assets.Scripts.Characters
 {
     public class Student : Character
     {
-        // Will be handled later by a manager.
+        public Persona persona;
         public GameObject popup;
 
         // currentProblem, this can be null or not
@@ -19,7 +19,8 @@ namespace Assets.Scripts.Characters
 
         private void Start()
         {
-            SpawnPopup();
+            //SpawnPopup();
+            this.persona = RandomPersonaGenerator.GenerateRandomPersona();
         }
 
         public override void ApplySolution(ASolution solution)
@@ -54,30 +55,29 @@ namespace Assets.Scripts.Characters
 
         public override void SpawnPopup()
         {
-            // Will be later replaced by a factory pattern.
-            // Spawns in a popup with the correct data to it.
+            //// Will be later replaced by a factory pattern.
+            //// Spawns in a popup with the correct data to it.
 
-            // Assigns problem to student.
-            Problem problem = problemManager.GenerateRandomProblem();
-            // Also temporary solution, will need to be integrated in problem manager.
-            AssignProblem(problem);
-            
-            if(problem != null)
-            {
-                GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
-                // Puts game object under spawn point
-                spawnedPopup.transform.SetParent(spawnPoint.transform);
+            //// Assigns problem to student.
+            //Problem problem = problemManager.GenerateHalfRandomProblem();
+            //// Also temporary solution, will need to be integrated in problem manager.
+            //AssignProblem(problem);
 
-                var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
-                if (problemPopUp != null)
-                {
-                    problemPopUp.originStudent = this;
-                    problemPopUp.problemManager = problemManager;
+            //if (problem != null)
+            //{
+            //    GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
+            //    // Puts game object under spawn point
+            //    spawnedPopup.transform.SetParent(spawnPoint.transform);
 
-                    popup = spawnedPopup;
-                }
-            }
-            
+            //    var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
+            //    if (problemPopUp != null)
+            //    {
+            //        problemPopUp.originStudent = this;
+            //        problemPopUp.problemManager = problemManager;
+
+            //        popup = spawnedPopup;
+            //    }
+            //}
         }
     }
 }

@@ -59,4 +59,11 @@ public class ProblemStudentBored : MonoBehaviour, IProblem
         ProblemScreen.SetActive(true);
     }
 
+    public enum ProblemTypeEnum
+    {
+        Autonomy,
+        Competency,
+        Connection
+    }
+
 }

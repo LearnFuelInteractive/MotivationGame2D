@@ -8,7 +8,7 @@ public class PlayerInputManager : MonoBehaviour
 {
     public UnityEvent<Vector2> moveEvent;
     public UnityEvent<bool> sprintEvent;
-
+    public Animator animator;
     private Vector2 movementInput;
     
     // Start is called before the first frame update
@@ -32,6 +32,17 @@ public class PlayerInputManager : MonoBehaviour
     void FixedUpdate()
     {
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if(movementInput != Vector2.zero) {
+            animator.SetFloat("XInput", movementInput.x);
+            animator.SetFloat("YInput", movementInput.y);
+            animator.SetBool("IsWalking", true);
+        } else
+        {
+            animator.SetBool("IsWalking", false);
+
+        }
+
+
         moveEvent.Invoke(movementInput);
     }
 }
