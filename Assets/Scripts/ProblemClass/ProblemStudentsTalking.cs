@@ -1,20 +1,12 @@
 using Assets.Scripts.Characters;
 using Assets.Scripts.Popup;
 using System.Collections;
-using System.Collections.Generic;
 using Assets.Scripts.ProblemClass;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using Assets.Scripts.ProblemClass;
 
-public class ProblemStudensTalking : MonoBehaviour, IProblem
+public class ProblemStudensTalking : IProblem
 {
     public GameObject ProblemScreen;
-    public GameObject ProblemIcon;
-    public string ProblemName = "Students are talking";
-    public string ProblemExplanation = "Students are talking getting distracted and start talking with other students... What would you do?";
-
-    public Student RelevantStudent;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +30,6 @@ public class ProblemStudensTalking : MonoBehaviour, IProblem
         return "There is a problem";
     }
 
-    public void Affect()
-    {
-    }
-
     public void Click()
     {
         // Other logic like spending time/energy in-game.
@@ -58,4 +46,8 @@ public class ProblemStudensTalking : MonoBehaviour, IProblem
         ProblemScreen.SetActive(true);
     }
 
+    public override void Affect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

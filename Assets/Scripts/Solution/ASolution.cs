@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Assets.Scripts.ProblemClass;
+using Assets.Scripts.Other;
 
 public abstract class ASolution : MonoBehaviour
 {
@@ -13,21 +14,12 @@ public abstract class ASolution : MonoBehaviour
     public Student TargetedStudent = null;
 
     // Modifiers solution
+    public CompetenceType CompetenceType;
+    public float StandardValue = 40.0f;
+
     public float competenceGrade = 0.60f;
     public float autonomyGrade = 0.0f;
     public float connectionGrade = 0.0f;
-
-
-    // Applies effect to
-    public virtual void ApplyToProblem(Problem problem)
-    {
-        // Get Character relevant to problem
-        Student godCharacter = problem.RelevantStudent;
-        // Get type of problem information.
-        Debug.Log(problem.ProblemType());
-        // Solve the problem.
-        godCharacter.ApplySolution(this);
-    }
 
     // Apply the effects of the solution to the character
     public abstract bool SolveProblem(Student character);

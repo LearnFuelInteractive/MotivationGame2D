@@ -59,6 +59,8 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Competence");
             var problem = competencyProblems[Random.Range(0, competencyProblems.Count)];
+            problem.GenerateRandomAcceptanceCriteria();
+            Debug.Log($"Acceptance criteria on creation is {problem.AcceptanceCriteria}");
             student.AssignProblem(problem);
             problem.RelevantStudent = student;
             activeProblems.Add(problem);

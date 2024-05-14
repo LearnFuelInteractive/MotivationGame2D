@@ -186,6 +186,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
+  CompetenceType: 1
+  StandardValue: 40
   competenceGrade: 0.6
   autonomyGrade: 0
   connectionGrade: 0
+  Mediator: {fileID: 0}

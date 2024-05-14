@@ -1,5 +1,7 @@
-﻿using Assets.Scripts.ProblemClass;
+﻿using Assets.Scripts.Mediator;
+using Assets.Scripts.ProblemClass;
 using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace Assets.Scripts.Characters
@@ -8,6 +10,7 @@ namespace Assets.Scripts.Characters
     {
         public Persona persona;
         public GameObject popup;
+        public IMediator mediator;
 
         // currentProblem, this can be null or not
         public Problem currentProblem;
@@ -20,6 +23,7 @@ namespace Assets.Scripts.Characters
         private void Start()
         {
             //SpawnPopup();
+            mediator = FindAnyObjectByType<IMediator>();
             this.persona = RandomPersonaGenerator.GenerateRandomPersona();
             problemManager = FindAnyObjectByType<ProblemManager>();
             if (problemManager == null ) {
@@ -29,12 +33,19 @@ namespace Assets.Scripts.Characters
 
         public override void ApplySolution(ASolution solution)
         {
-            var answer = solution.SolveProblem(this);
+            Debug.Log("Passes through student.");
+            var HasSolved = solution.SolveProblem(this);
 
-            if (answer)
+            if (HasSolved)
             {
                 DestroyImmediate(popup, true);
             }
+        }
+
+        public void DestroyPopup()
+        {
+            Debug.Log("Destroy popup");
+            Destroy(popup);
         }
 
         public override void Respond()
@@ -59,14 +70,6 @@ namespace Assets.Scripts.Characters
 
         public override void SpawnPopup()
         {
-            //// Will be later replaced by a factory pattern.
-            //// Spawns in a popup with the correct data to it.
-
-            //// Assigns problem to student.
-            //Problem problem = problemManager.GenerateHalfRandomProblem();
-            //// Also temporary solution, will need to be integrated in problem manager.
-            //AssignProblem(problem);
-
             if (currentProblem != null)
             {
                 GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);

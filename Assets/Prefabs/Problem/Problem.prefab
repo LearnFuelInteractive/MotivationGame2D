@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProblemIcon: {fileID: 2350025421434431747}
-  RelevantStudent: {fileID: 0}
   ProblemName: Sleep
+  ProblemExplanation: Default value
+  RelevantStudent: {fileID: 0}
+  CompetenceType: 1
+  AcceptanceCriteria: 0
 --- !u!1 &6796231914186112866
 GameObject:
   m_ObjectHideFlags: 0
