@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50301d24fa86c22459f1ed14731bf950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProblemScreen: {fileID: 6923509395146575482, guid: 894f8d09697c36b449786d528de15edb, type: 3}
   ProblemIcon: {fileID: 6923509395146575482, guid: 894f8d09697c36b449786d528de15edb, type: 3}
-  ProblemName: Demo Competency Problem
-  typeOfProblem: 1
   RelevantStudent: {fileID: 0}
+  ProblemName: Demo Competency Problem
+  competenceType: 1
+  AcceptanceCriteria: 0

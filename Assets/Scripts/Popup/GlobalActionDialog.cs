@@ -10,6 +10,8 @@ namespace Assets.Scripts.Popup
         // For now a relation to level manager.
         public IMediator Mediator;
 
+        
+
         private void Start()
         {
             // Default setting
