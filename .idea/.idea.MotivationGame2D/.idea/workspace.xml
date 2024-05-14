@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="43d44d5b-2280-4033-a2c5-3d0db05625a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MotivationGame2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MotivationGame2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/IndividualActionDialog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/IndividualActionDialog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/IndividualActionDialog.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/IndividualActionDialog.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClassroomScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClassroomScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/TimerBarScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/TimerBarScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <updated>1715699105142</updated>
       <workItem from="1715699106485" duration="10169000" />
       <workItem from="1715709534201" duration="1689000" />
-      <workItem from="1715711264271" duration="1513000" />
+      <workItem from="1715711264271" duration="1571000" />
     </task>
     <servers />
   </component>
