@@ -21,8 +21,6 @@ namespace Assets.Scripts.Mediator
             levelManager = FindAnyObjectByType<LevelManager>();
         }
 
-        
-
         public override void Notify(ASolution solution, string value)
         {
             Debug.Log($"Mediator notifies to {value}");
@@ -36,6 +34,7 @@ namespace Assets.Scripts.Mediator
             {
                 ReactToStudent(solution);
             }
+            // Spend energy.
 
             // Notify mentor
             ReactToMentor();

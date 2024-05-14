@@ -12,6 +12,9 @@ namespace Assets.Scripts.Solution.GlobalSolutions
             // Calls the mediator.
             var val = "All";
             Mediator.Notify(this, val);
+
+            // Something to spend energy.
+
             // Closes dialog.
             ConfirmAction();
         }
