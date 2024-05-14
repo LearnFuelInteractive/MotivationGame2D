@@ -22,11 +22,6 @@ namespace Assets.Scripts.Popup
         // When player has clicked upon problem, a dialog screen should be spawned and all other elements should be blacked out.
         // Focus should be aimed at player, student and dialog.
 
-        private void Start()
-        {
-            
-        }
-
         public override void ShowPopup()
         {
             // Should also process problem and student.
@@ -35,9 +30,9 @@ namespace Assets.Scripts.Popup
             ChangeText();
         }
 
-        public void DestoryPopup()
+        public override void HidePopup()
         {
-            HidePopup();
+            base.HidePopup();
         }
 
         public override void UpdateSolution()

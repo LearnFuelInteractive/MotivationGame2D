@@ -4,7 +4,6 @@ using UnityEngine;
 using DentedPixel;
 using TMPro;
 using UnityEditor;
-using UnityEngine.Events;
 
 public class TimerBarScript : MonoBehaviour
 {
@@ -14,7 +13,6 @@ public class TimerBarScript : MonoBehaviour
     public GameObject failMessagePopup;
     public GameObject locationOfPopup;
     public GameObject canvas;
-    public UnityEvent removeDialog;
 
 
     // Start is called before the first frame update
@@ -45,11 +43,10 @@ public class TimerBarScript : MonoBehaviour
         LeanTween.delayedCall(3, HideMessage);
 
     }
-    
+       
     public void HideMessage()
     {
-        Debug.Log("called");
-        removeDialog.Invoke();
+        Destroy(failMessagePopup);
     }
 
 }

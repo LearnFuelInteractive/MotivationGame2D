@@ -1,9 +1,6 @@
-﻿using Assets.Scripts.Popup;
-using Assets.Scripts.ProblemClass;
+﻿using Assets.Scripts.ProblemClass;
 using System;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Characters
 {
@@ -19,10 +16,6 @@ namespace Assets.Scripts.Characters
         // Temp variabels.
         public float problemMeter = 40;
         public float AcceptanceCriteria = 0;
-
-        public Student originStudent;
-        public UnityEvent removeDialog;
-        public bool isInRange = false;
 
         private void Start()
         {
@@ -85,29 +78,6 @@ namespace Assets.Scripts.Characters
                 }
             }
             
-        }
-   
-     
-        public void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                isInRange = true;
-
-            }
-        }
-
-        public void OnTriggerExit2D(Collider2D collision)
-        {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                isInRange = false;
-            }
-        }
-
-        public bool IsInRange
-        {
-            get => isInRange;
         }
     }
 }

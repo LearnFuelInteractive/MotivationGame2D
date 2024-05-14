@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2792834430858366324}
   - component: {fileID: 3134361619482183783}
+  - component: {fileID: 8723392720788305294}
   - component: {fileID: -6875313028911298888}
-  - component: {fileID: -3582853888619912682}
   m_Layer: 0
   m_Name: NotificationPopup
   m_TagString: Untagged
@@ -87,22 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6875313028911298888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5249099333701449841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399bfd7dbcaeb0f47a304b686f4d176d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUp: {fileID: 5249099333701449841}
-  originStudent: {fileID: 0}
-  problemManager: {fileID: 0}
---- !u!61 &-3582853888619912682
+--- !u!61 &8723392720788305294
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,10 +116,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -145,8 +130,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.4, y: 1.8}
   m_EdgeRadius: 0
+--- !u!114 &-6875313028911298888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5249099333701449841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399bfd7dbcaeb0f47a304b686f4d176d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUp: {fileID: 5249099333701449841}
+  originStudent: {fileID: 0}
+  problemManager: {fileID: 0}
 --- !u!1001 &4220361482148801403
 PrefabInstance:
   m_ObjectHideFlags: 0

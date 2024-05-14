@@ -11,31 +11,17 @@ namespace Assets.Scripts.Popup
     {
         // Contains popup object
         public GameObject popUp;
-        // Static variable to check if popup is already instantiated
-        private static GameObject instantiatedPopUp;
 
         // These methods are virtual in case the implementation needs to differ.
         public virtual void ShowPopup()
         {
-            // Check if the popup has already been instantiated
-            if (instantiatedPopUp == null)
-            {
-                // Instantiate the popup if it hasn't been instantiated
-                instantiatedPopUp = Instantiate(popUp);
-            }
+            popUp.SetActive(true);
         }
 
         public virtual void HidePopup()
         {
-            // Check if the popup has already been instantiated
-            if (instantiatedPopUp != null)
-            {
-                // Destroy the popup if it has been instantiated
-                Destroy(instantiatedPopUp);
-                instantiatedPopUp = null;
-            }
-            
-            
+            // These methods are virtual in case the implementation needs to differ.
+            popUp.SetActive(false);
         }
     }
 }
