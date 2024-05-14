@@ -2,6 +2,7 @@ using Assets.Scripts.Characters;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Assets.Scripts.ProblemClass;
 
 public abstract class ASolution : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public abstract class ASolution : MonoBehaviour
     public UnityEvent confirmChoice;
 
     // To get character of the problem.
-    public Problem RelevantProblem = null;
+    public Student TargetedStudent = null;
 
     // Modifiers solution
     public float competenceGrade = 0.60f;
@@ -32,5 +33,6 @@ public abstract class ASolution : MonoBehaviour
     public abstract bool SolveProblem(Student character);
     public abstract bool CheckAcceptanceCriteria(float acceptanceCriteria, float value);
     public abstract void ConfirmAction();
+    public abstract void SelectSolution();
 
 }
