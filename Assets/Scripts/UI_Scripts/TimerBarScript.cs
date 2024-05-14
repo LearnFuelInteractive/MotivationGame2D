@@ -14,6 +14,7 @@ public class TimerBarScript : MonoBehaviour
     public GameObject failMessagePopup;
     public GameObject locationOfPopup;
     public GameObject canvas;
+    public TimeManager tickTime;
 
 
 
@@ -21,6 +22,10 @@ public class TimerBarScript : MonoBehaviour
     void Start()
     {
         AnimateBar();
+        
+        //get component of TimeManager
+        tickTime = GameObject.Find("TimeManager").GetComponent<TimeManager>();
+        
        
     }
 
@@ -49,6 +54,7 @@ public class TimerBarScript : MonoBehaviour
     public void HideMessage()
     {
         Destroy(canvas);
+        tickTime.IncreaseTime();
 
     }
 
