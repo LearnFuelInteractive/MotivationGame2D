@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using Assets.Scripts.ProblemClass;
 
 public class LevelManager : MonoBehaviour
 {

@@ -26,10 +26,10 @@ namespace Assets.Scripts.ProblemClass
             return GlobalActionDialog;
         }
 
-        public Problem GenerateRandomProblem()
-        {
-            // Temp solution, will be replaced with random generated problem
-            return ProblemList.First();
-        }
+        //public Problem GenerateRandomProblem()
+        //{
+        //    // Temp solution, will be replaced with random generated problem
+        //    //return ProblemList.First();
+        //}
     }
 }
