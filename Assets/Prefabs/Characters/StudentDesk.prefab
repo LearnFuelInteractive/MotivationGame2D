@@ -231,7 +231,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1422632472472261669}
   - component: {fileID: 2411697033115203590}
-  - component: {fileID: 6782968927781554683}
   m_Layer: 0
   m_Name: StudentDesk
   m_TagString: Student
@@ -272,29 +271,10 @@ MonoBehaviour:
   character: {fileID: 6884778182879925574}
   spawnPoint: {fileID: 989601599901992788}
   Name: Dave
+  persona: {fileID: 0}
   popup: {fileID: 5249099333701449841, guid: 34ab4f79f5a68414c8f175a67b6c2dfb, type: 3}
   currentProblem: {fileID: 0}
   problemManager: {fileID: 1257943813135182407, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
+  isInRange: 0
   problemMeter: 40
   AcceptanceCriteria: 0
---- !u!65 &6782968927781554683
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6884778182879925574}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
