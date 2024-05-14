@@ -63,21 +63,21 @@ namespace Assets.Scripts.Characters
             //// Also temporary solution, will need to be integrated in problem manager.
             //AssignProblem(problem);
 
-            //if (problem != null)
-            //{
-            //    GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
-            //    // Puts game object under spawn point
-            //    spawnedPopup.transform.SetParent(spawnPoint.transform);
+            if (currentProblem != null)
+            {
+                GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
+                // Puts game object under spawn point
+                spawnedPopup.transform.SetParent(spawnPoint.transform);
 
-            //    var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
-            //    if (problemPopUp != null)
-            //    {
-            //        problemPopUp.originStudent = this;
-            //        problemPopUp.problemManager = problemManager;
+                var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
+                if (problemPopUp != null)
+                {
+                    problemPopUp.originStudent = this;
+                    problemPopUp.problemManager = problemManager;
 
-            //        popup = spawnedPopup;
-            //    }
-            //}
+                    popup = spawnedPopup;
+                }
+            }
         }
     }
 }
