@@ -10,13 +10,13 @@ namespace Assets.Scripts.ProblemClass
 {
     public class ProblemManager: MonoBehaviour
     {
-        public ActionDialog IndividualDialog;
-        public IActionDialog GlobalActionDialog;
+        public IndividualActionDialog IndividualDialog;
+        public GlobalActionDialog GlobalActionDialog;
 
         public List<Problem> ProblemList;
         
 
-        public ActionDialog GetIndividualDialog()
+        public IndividualActionDialog GetIndividualDialog()
         {
             if (IndividualDialog == null)
             {
@@ -25,7 +25,7 @@ namespace Assets.Scripts.ProblemClass
             return IndividualDialog;
         }
 
-        public IActionDialog GetGlobalActionDialog()
+        public GlobalActionDialog GetGlobalActionDialog()
         {
             if (GlobalActionDialog == null)
             {
@@ -34,5 +34,7 @@ namespace Assets.Scripts.ProblemClass
             
             return GlobalActionDialog;
         }
+
+     
     }
 }

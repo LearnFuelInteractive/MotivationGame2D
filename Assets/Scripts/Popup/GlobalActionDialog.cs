@@ -18,25 +18,31 @@ namespace Assets.Scripts.Popup
             Mediator = GameObject.FindFirstObjectByType <LevelMediator>();
         }
 
+        public void ShowPopupDialog()
+        {
+            // Should also process problem and student.
+            Debug.Log("opened the showpopup method in global action dialog");
+            ShowPopup(); // dooesnt work
+           // Instantiate(gameObject); // works
+            
+         
+        }
         public override void UpdateSolution()
         {
             // Get mediator class and assign it to global solution
             Debug.Log("No updates required");
         }
 
-        public object GetMediator()
-        {
-            return Mediator;
-        }
-        
-        public void ShowPopupDialog()
-        {
-            ShowPopup();
-        }
-
         public void DestroyPopup()
         {
             HidePopup();
         }
+        
+        public object GetMediator()
+        {
+            return Mediator;
+        }
+
+       
     }
 }

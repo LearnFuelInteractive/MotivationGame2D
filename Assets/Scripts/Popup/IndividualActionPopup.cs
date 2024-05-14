@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ProblemPopup : IPopup, IPointerClickHandler
+public class IndividualActionPopup : IPopup, IPointerClickHandler
 {
     //// Will have some relation back to the student.
     public Student originStudent;
     
-    private ActionDialog dialog;
+    private IndividualActionDialog dialog;
 
     //// Temp variable, will be replaced with a service locator to the ProblemManager.
     //// Later variables will ensure that only if the student has been touched, that the popup will be clickable.
@@ -21,6 +21,7 @@ public class ProblemPopup : IPopup, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Clicking on individual action popup.");
         if (originStudent == null)
         {
             Debug.LogError("originStudent is not initialized!");
@@ -50,6 +51,7 @@ public class ProblemPopup : IPopup, IPointerClickHandler
 
         dialog.student = originStudent;
         dialog.ShowPopup();
+        
         Debug.Log("Individual action: Open dialog.");
     }
 

@@ -15,13 +15,42 @@ namespace Assets.Scripts.Popup
         private static GameObject instantiatedPopUp;
 
         // These methods are virtual in case the implementation needs to differ.
-        public virtual void ShowPopup()
+        public void ShowPopup()
         {
+            Debug.Log("Arrived in THE showpopup method in IPopup class");
+            
+            if (popUp == null)
+            {
+                 Debug.Log("Cant find popup object.");
+            }
+            
+            Debug.Log(popUp.name + " going to be instantiated."); 
+            
             // Check if the popup has already been instantiated
             if (instantiatedPopUp == null)
             {
+
+                try
+                {
+                    instantiatedPopUp = Instantiate(gameObject); // doesnt work
+                    instantiatedPopUp = Instantiate(popUp); // doesnt work
+                    Debug.Log("Created: " + instantiatedPopUp, instantiatedPopUp);
+                    
+
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
                 // Instantiate the popup if it hasn't been instantiated
-                instantiatedPopUp = Instantiate(popUp);
+              
+              
+                
+            }
+            else
+            {
+                Debug.Log("Popup already instantiated.");
             }
         }
 

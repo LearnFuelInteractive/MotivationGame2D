@@ -75,7 +75,7 @@ namespace Assets.Scripts.Characters
                 // Puts game object under spawn point
                 spawnedPopup.transform.SetParent(spawnPoint.transform);
 
-                var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
+                var problemPopUp = spawnedPopup.GetComponent<IndividualActionPopup>();
                 if (problemPopUp != null)
                 {
                     problemPopUp.originStudent = this;

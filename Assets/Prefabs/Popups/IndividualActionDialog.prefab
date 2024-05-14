@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 1159902098403725349}
   - component: {fileID: 825213376848815900}
   m_Layer: 5
-  m_Name: ActionDialogPopupCanvas
+  m_Name: IndividualActionDialog
   m_TagString: ActionBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

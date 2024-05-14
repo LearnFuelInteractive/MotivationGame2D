@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8723392720788305294}
   - component: {fileID: -6875313028911298888}
   m_Layer: 0
-  m_Name: NotificationPopup
+  m_Name: IndividualActionPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
