@@ -11,6 +11,7 @@ namespace Assets.Scripts.ProblemClass
     public class ProblemManager: MonoBehaviour
     {
         public ActionDialog IndividualDialog;
+        public IActionDialog GlobalActionDialog;
 
         public List<Problem> ProblemList;
         
@@ -18,6 +19,11 @@ namespace Assets.Scripts.ProblemClass
         public ActionDialog GetIndividualDialog()
         {
             return IndividualDialog;
+        }
+
+        public IActionDialog GetGlobalActionDialog()
+        {
+            return GlobalActionDialog;
         }
 
         public Problem GenerateRandomProblem()

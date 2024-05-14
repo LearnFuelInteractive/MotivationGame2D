@@ -33,5 +33,6 @@ public abstract class ASolution : MonoBehaviour
     public abstract bool SolveProblem(Student character);
     public abstract bool CheckAcceptanceCriteria(float acceptanceCriteria, float value);
     public abstract void ConfirmAction();
+    public abstract void SelectSolution();
 
 }
