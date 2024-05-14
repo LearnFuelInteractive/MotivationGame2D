@@ -28,5 +28,15 @@ namespace Assets.Scripts.Popup
         {
             return Mediator;
         }
+        
+        public void ShowPopupDialog()
+        {
+            ShowPopup();
+        }
+
+        public void DestroyPopup()
+        {
+            HidePopup();
+        }
     }
 }

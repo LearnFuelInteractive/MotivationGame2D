@@ -4,6 +4,7 @@ using UnityEngine;
 using DentedPixel;
 using TMPro;
 using UnityEditor;
+using UnityEngine.Events;
 
 public class TimerBarScript : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TimerBarScript : MonoBehaviour
     public GameObject failMessagePopup;
     public GameObject locationOfPopup;
     public GameObject canvas;
+
 
 
     // Start is called before the first frame update
@@ -46,7 +48,8 @@ public class TimerBarScript : MonoBehaviour
        
     public void HideMessage()
     {
-        Destroy(failMessagePopup);
+        Destroy(canvas);
+
     }
 
 }

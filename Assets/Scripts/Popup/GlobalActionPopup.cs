@@ -12,19 +12,31 @@ namespace Assets.Scripts.Popup
         public ProblemManager problemManager;
         public GlobalActionSpawn parent;
         public UnityEvent updateSpawner;
-
+        private IActionDialog dialog;
+        
+        
         void Start()
         {
+            this.problemManager = FindObjectOfType<ProblemManager>();
             hasOpened = false;
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             Debug.Log("Clicked on global action popup.");
-            var dialog = problemManager.GetGlobalActionDialog();
+            dialog = problemManager.GetGlobalActionDialog();
+            if (dialog == null)
+            {
+                Debug.LogError("Failed to get a valid dialog from ProblemManager!");
+                return;
+            }
             dialog.ShowPopup();
+            
+            
+            
             gameObject.SetActive(false);
             parent.HasEntered = hasOpened;
+            
         }
     }
 }

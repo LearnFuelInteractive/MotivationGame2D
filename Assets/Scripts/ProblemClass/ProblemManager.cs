@@ -27,6 +27,11 @@ namespace Assets.Scripts.ProblemClass
 
         public IActionDialog GetGlobalActionDialog()
         {
+            if (GlobalActionDialog == null)
+            {
+                Debug.LogError("Failed to get a valid dialog from GlobalActionDialog!");
+            }
+            
             return GlobalActionDialog;
         }
     }

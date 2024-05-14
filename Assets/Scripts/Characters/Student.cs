@@ -107,5 +107,11 @@ namespace Assets.Scripts.Characters
         {
             get => isInRange;
         }
+        
+        
+        public void DestroyProblemPopup()
+        {
+            Destroy(popup);
+        }
     }
 }

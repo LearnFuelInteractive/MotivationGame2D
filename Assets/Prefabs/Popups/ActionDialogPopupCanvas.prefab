@@ -397,7 +397,7 @@ MonoBehaviour:
   - {fileID: 0}
   StudentName: {fileID: 0}
   ProblemOfStudent: {fileID: 0}
-  student: {fileID: 0}
+  student: {fileID: 2411697033115203590, guid: 25f9af73dce6b344eb9dabdc5a471a44, type: 3}
 --- !u!1 &2573672704212765990
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +622,21 @@ MonoBehaviour:
   failMessagePopup: {fileID: 4595308400292169925, guid: 6e9487bdc95980b47a8db84a58a15c19, type: 3}
   locationOfPopup: {fileID: 6180871712538961138}
   canvas: {fileID: 2000552893692200905}
+  removeProblemIconPopup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2411697033115203590, guid: 25f9af73dce6b344eb9dabdc5a471a44, type: 3}
+        m_TargetAssemblyTypeName: Assets.Scripts.Characters.Student, Assembly-CSharp
+        m_MethodName: DestroyProblemPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4898360279925457682
 GameObject:
   m_ObjectHideFlags: 0
