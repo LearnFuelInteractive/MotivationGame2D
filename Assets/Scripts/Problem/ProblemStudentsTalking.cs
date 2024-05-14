@@ -2,6 +2,7 @@ using Assets.Scripts.Characters;
 using Assets.Scripts.Popup;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.ProblemClass;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
