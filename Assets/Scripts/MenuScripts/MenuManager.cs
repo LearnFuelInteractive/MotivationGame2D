@@ -5,20 +5,13 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     // Class type
-    public bool typeSelected = false;
-    public bool theorySelected = false;
-    public bool practicalSelected = false;
-    public bool collegeSelected = false;
-    public bool groupSelected = false;
+    public int classType = 0;
 
     // Class layout
-    public bool layoutSelected = false;
-    public bool normalLayoutSelected = false;
-    public bool groupedLayoutSelected = false;
-    public bool spacedLayoutSelected = false;
+    public int classLayout = 0;
 
     // Class modifiers
-    public bool kahootSelected = false;
+    public List<int> modifiers = new();
 
     // Start is called before the first frame update
     void Start()
@@ -30,5 +23,10 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
