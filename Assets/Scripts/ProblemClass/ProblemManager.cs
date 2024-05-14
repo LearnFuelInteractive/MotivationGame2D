@@ -18,6 +18,10 @@ namespace Assets.Scripts.ProblemClass
 
         public ActionDialog GetIndividualDialog()
         {
+            if (IndividualDialog == null)
+            {
+                Debug.LogError("Failed to get a valid dialog from IndividualDialog! blaah");
+            }
             return IndividualDialog;
         }
 
@@ -25,11 +29,5 @@ namespace Assets.Scripts.ProblemClass
         {
             return GlobalActionDialog;
         }
-
-        //public Problem GenerateRandomProblem()
-        //{
-        //    // Temp solution, will be replaced with random generated problem
-        //    //return ProblemList.First();
-        //}
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using Assets.Scripts.Characters;
 using Assets.Scripts.Popup;
 using Assets.Scripts.ProblemClass;
@@ -38,6 +39,7 @@ public class ProblemPopup : IPopup, IPointerClickHandler
             return;
         }
 
+
         dialog = problemManager.GetIndividualDialog();
 
         if (dialog == null)
@@ -57,8 +59,8 @@ public class ProblemPopup : IPopup, IPointerClickHandler
     }
 
 
-    
-    
-
- 
+    private void Start()
+    {
+        this.problemManager = FindObjectOfType<ProblemManager>();
+    }
 }
