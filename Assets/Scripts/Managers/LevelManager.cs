@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     public List<Problem> connectionProblems = new List<Problem>();
     public List<Problem> competencyProblems = new List<Problem>();
     public List<Problem> autonomyProblems = new List<Problem>();
+    public List<Problem> activeProblems = new List<Problem>();
+    public int maxNumberOfProblems = 2;
     public float mintimeBetweenProblems = 10;
     public float maxtimeBetweenProblems = 20;
 
@@ -34,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnProblem()
     {
-        if(timeLeftUntilProblem < 0)
+        if(timeLeftUntilProblem < 0 && activeProblems.Count < maxNumberOfProblems)
         {
             var studentWithProblem = students[Random.Range(0, students.Count)];
             Student studentObject = studentWithProblem.GetComponent<Student>();
@@ -59,6 +61,7 @@ public class LevelManager : MonoBehaviour
             var problem = competencyProblems[Random.Range(0, competencyProblems.Count)];
             student.AssignProblem(problem);
             problem.RelevantStudent = student;
+            activeProblems.Add(problem);
         }
         else if (randomFloat <= (persona.Competence + persona.Connection))
         {
@@ -66,12 +69,17 @@ public class LevelManager : MonoBehaviour
             student.AssignProblem(problem);
             problem.RelevantStudent = student;
             Debug.Log("Connection");
-        } else
+            activeProblems.Add(problem);
+
+        }
+        else
         {
             var problem = autonomyProblems[Random.Range(0, competencyProblems.Count)];
             student.AssignProblem(problem);
             problem.RelevantStudent = student;
             Debug.Log("Autonomy");
+            activeProblems.Add(problem);
+
         }
 
     }
