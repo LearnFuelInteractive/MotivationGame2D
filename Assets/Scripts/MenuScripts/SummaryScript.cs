@@ -13,6 +13,11 @@ public class SummaryScript : MonoBehaviour
     public Sprite spacedLayout;
     public TextMeshProUGUI classModifiersText;
 
+    private readonly string selectedClassTypeKey = "SelectedClassType";
+    private readonly string selectedClassLayoutKey = "SelectedClassLayout";
+    private readonly string selectedModifiersKey = "SelectedModifiers";
+    private string modifierText = "";
+
     public GameObject modifiersScreen;
     public GameObject summaryScreen;
 
@@ -33,29 +38,77 @@ public class SummaryScript : MonoBehaviour
     public void Finish()
     {
         // Move to game scene
+        PlayerPrefs.SetString(selectedModifiersKey, modifierText);
     }
 
     private void ClassTypeCheck()
     {
-        classTypeText.text = menuManager.classType switch
+
+        switch (menuManager.classType)
         {
-            1 => "-Theorie",
-            2 => "-Practicum",
-            3 => "-Hoorcollege",
-            4 => "-Groepsopdracht",
-            _ => "-Theorie",
-        };
+            case 1:
+                {
+                    classTypeText.text = "-Theorie";
+                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
+                    break;
+                }
+            case 2:
+                {
+                    classTypeText.text = "-Practicum";
+                    PlayerPrefs.SetString(selectedClassTypeKey, "PracticalClassType");
+                    break;
+                }
+            case 3:
+                {
+                    classTypeText.text = "-Hoorcollege";
+                    PlayerPrefs.SetString(selectedClassTypeKey, "CollegeClassType");
+                    break;
+                }
+            case 4:
+                {
+                    classTypeText.text = "-Groepsopdracht";
+                    PlayerPrefs.SetString(selectedClassTypeKey, "GroupClassType");
+                    break;
+                }
+            default:
+                {
+                    classTypeText.text = "-Theorie";
+                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
+                    break;
+                }
+        }
     }
 
     private void ClassLayoutCheck()
     {
-        classLayout.GetComponent<Image>().sprite = menuManager.classLayout switch
+
+        switch (menuManager.classLayout)
         {
-            1 => normalLayout,
-            2 => groupedLayout,
-            3 => spacedLayout,
-            _ => normalLayout,
-        };
+            case 1:
+                {
+                    classLayout.GetComponent<Image>().sprite = normalLayout;
+                    PlayerPrefs.SetString(selectedClassLayoutKey, "NormalClassLayout");
+                    break;
+                }
+            case 2:
+                {
+                    classLayout.GetComponent<Image>().sprite = groupedLayout;
+                    PlayerPrefs.SetString(selectedClassLayoutKey, "GroupClassLayout");
+                    break;
+                }
+            case 3:
+                {
+                    classLayout.GetComponent<Image>().sprite = spacedLayout;
+                    PlayerPrefs.SetString(selectedClassLayoutKey, "SpacedClassLayout");
+                    break;
+                }
+            default:
+                {
+                    classLayout.GetComponent<Image>().sprite = normalLayout;
+                    PlayerPrefs.SetString(selectedClassLayoutKey, "NormalClassLayout");
+                    break;
+                }
+        }
     }
 
     private void ModifiersCheck()
@@ -64,16 +117,19 @@ public class SummaryScript : MonoBehaviour
         {
             classModifiersText.text = "";
         }
+
         foreach (var modifier in menuManager.modifiers)
         {
-            classModifiersText.text += modifier switch
+            modifierText += modifier.ToString();
+            switch (modifier)
             {
-                1 => "-Kahoot\n",
-                2 => "-2nd Modifier\n",
-                3 => "-3rd Modifier\n",
-                4 => "-4th Modifier\n",
-                _ => "-Kahoot\n",
-            };
+                case 1:
+                    {
+                        modifierText += "Kahoot,";
+                        classModifiersText.text = "-Kahoot\n";
+                        break;
+                    }
+            }
         }
     }
 }
