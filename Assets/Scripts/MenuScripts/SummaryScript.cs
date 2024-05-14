@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SummaryScript : MonoBehaviour
@@ -39,6 +40,7 @@ public class SummaryScript : MonoBehaviour
     {
         // Move to game scene
         PlayerPrefs.SetString(selectedModifiersKey, modifierText);
+        SceneManager.LoadScene("ClassroomScene");
     }
 
     private void ClassTypeCheck()
