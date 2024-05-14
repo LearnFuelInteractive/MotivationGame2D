@@ -8,6 +8,7 @@ TagManager:
   - NormalClassLayout
   - Student
   - ActionBar
+  - GameMusic
   layers:
   - Default
   - TransparentFX

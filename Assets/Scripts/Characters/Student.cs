@@ -23,6 +23,10 @@ namespace Assets.Scripts.Characters
         {
             //SpawnPopup();
             this.persona = RandomPersonaGenerator.GenerateRandomPersona();
+            problemManager = FindAnyObjectByType<ProblemManager>();
+            if (problemManager == null ) {
+                Debug.Log("Problem manager not found in scene");
+            }
         }
 
         public override void ApplySolution(ASolution solution)
