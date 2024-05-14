@@ -24,7 +24,7 @@ namespace Assets.Scripts.Popup
 
         public void Start()
         {
-            HidePopup();
+           // HidePopup();
         }
 
         public override void ShowPopup()
@@ -34,11 +34,7 @@ namespace Assets.Scripts.Popup
             UpdateSolution();
             ChangeText();
         }
-
-        public override void HidePopup()
-        {
-            base.HidePopup();
-        }
+        
 
         public override void UpdateSolution()
         {

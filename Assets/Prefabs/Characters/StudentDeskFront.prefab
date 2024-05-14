@@ -272,7 +272,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1562082664867514154}
   Name: Henk
   persona: {fileID: 0}
-  popup: {fileID: 6402109570090816598, guid: fc1d9cd086b66b447a4832199431fe1d, type: 3}
+  popup: {fileID: 5249099333701449841, guid: 34ab4f79f5a68414c8f175a67b6c2dfb, type: 3}
   currentProblem: {fileID: 0}
   problemManager: {fileID: 1257943813135182407, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
   problemMeter: 40
