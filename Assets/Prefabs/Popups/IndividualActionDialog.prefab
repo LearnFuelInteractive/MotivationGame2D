@@ -528,7 +528,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUp: {fileID: 2000552893692200905}
   solutions:
-  - {fileID: 0}
+  - {fileID: 6956824588406506936}
+  - {fileID: 5239769686695873754}
+  - {fileID: 6673640316133997132}
+  - {fileID: 5077006580857961219}
   StudentName: {fileID: 0}
   ProblemOfStudent: {fileID: 0}
   student: {fileID: 0}
@@ -756,21 +759,7 @@ MonoBehaviour:
   failMessagePopup: {fileID: 4595308400292169925, guid: 6e9487bdc95980b47a8db84a58a15c19, type: 3}
   locationOfPopup: {fileID: 6180871712538961138}
   canvas: {fileID: 2000552893692200905}
-  tickTime:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
-        m_MethodName: IncreaseTime
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  tickTime: {fileID: 0}
 --- !u!1 &3575287823252960842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,9 +1314,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
-  competenceGrade: 0.6
-  autonomyGrade: 0
-  connectionGrade: 0
+  CompetenceType: 0
+  StandardValue: 40
+  TimeNeeded: 10
+  Mediator: {fileID: 0}
 --- !u!1 &4858386821108411803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,9 +1470,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
-  competenceGrade: 0.6
-  autonomyGrade: 0
-  connectionGrade: 0
+  CompetenceType: 0
+  StandardValue: 40
+  TimeNeeded: 10
+  Mediator: {fileID: 0}
 --- !u!1 &4898360279925457682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,9 +1918,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
-  competenceGrade: 0.6
-  autonomyGrade: 0
-  connectionGrade: 0
+  CompetenceType: 0
+  StandardValue: 40
+  TimeNeeded: 10
+  Mediator: {fileID: 0}
 --- !u!1 &6180871712538961138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2734,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
-  competenceGrade: 0.6
-  autonomyGrade: 0
-  connectionGrade: 0
+  CompetenceType: 0
+  StandardValue: 40
+  TimeNeeded: 10
+  Mediator: {fileID: 0}
