@@ -23,6 +23,11 @@ namespace Assets.Scripts.ProblemClass {
         public void Affect()
         {
         }
+
+        public void AssignStudent(Student student)
+        {
+            this.RelevantStudent = student;
+        }
     }
 
 }

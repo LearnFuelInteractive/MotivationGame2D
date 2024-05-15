@@ -59,15 +59,17 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Competence");
             var problem = competencyProblems[Random.Range(0, competencyProblems.Count)];
+            Instantiate(problem);
             student.AssignProblem(problem);
-            problem.RelevantStudent = student;
+            problem.AssignStudent(student);
             activeProblems.Add(problem);
         }
         else if (randomFloat <= (persona.Competence + persona.Connection))
         {
             var problem = connectionProblems[Random.Range(0, competencyProblems.Count)];
+            Instantiate(problem);
             student.AssignProblem(problem);
-            problem.RelevantStudent = student;
+            problem.AssignStudent(student);
             Debug.Log("Connection");
             activeProblems.Add(problem);
 
@@ -75,8 +77,9 @@ public class LevelManager : MonoBehaviour
         else
         {
             var problem = autonomyProblems[Random.Range(0, competencyProblems.Count)];
+            Instantiate(problem);
             student.AssignProblem(problem);
-            problem.RelevantStudent = student;
+            problem.AssignStudent(student);
             Debug.Log("Autonomy");
             activeProblems.Add(problem);
 
