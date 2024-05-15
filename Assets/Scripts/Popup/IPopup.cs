@@ -11,17 +11,60 @@ namespace Assets.Scripts.Popup
     {
         // Contains popup object
         public GameObject popUp;
+        // Static variable to check if popup is already instantiated
+        private static GameObject instantiatedPopUp;
 
         // These methods are virtual in case the implementation needs to differ.
         public virtual void ShowPopup()
         {
-            popUp.SetActive(true);
+            Debug.Log("Arrived in THE showpopup method in IPopup class");
+            
+            if (popUp == null)
+            {
+                 Debug.Log("Cant find popup object.");
+            }
+            
+            Debug.Log(popUp.name + " going to be instantiated."); 
+            
+            // Check if the popup has already been instantiated
+            if (instantiatedPopUp == null)
+            {
+
+                try
+                {
+                   // instantiatedPopUp = Instantiate(gameObject); // doesnt work
+                    instantiatedPopUp = Instantiate(popUp); // doesnt work
+                    Debug.Log("Created: " + instantiatedPopUp, instantiatedPopUp);
+                    
+
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
+                // Instantiate the popup if it hasn't been instantiated
+              
+              
+                
+            }
+            else
+            {
+                Debug.Log("Popup already instantiated.");
+            }
         }
 
         public virtual void HidePopup()
         {
-            // These methods are virtual in case the implementation needs to differ.
-            popUp.SetActive(false);
+            // Check if the popup has already been instantiated
+            if (instantiatedPopUp != null)
+            {
+                // Destroy the popup if it has been instantiated
+                Destroy(instantiatedPopUp);
+                instantiatedPopUp = null;
+            }
+            
+            
         }
     }
 }

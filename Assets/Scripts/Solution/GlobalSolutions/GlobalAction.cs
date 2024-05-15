@@ -20,11 +20,11 @@ namespace Assets.Scripts.Solution.GlobalSolutions
             if (mediator != null)
             {
                 Mediator = mediator;
-                Debug.Log("Mediator found");
+               // Debug.Log("Mediator found");
             }
             else
             {
-                Debug.Log("Mediator not found");
+                //Debug.Log("Mediator not found");
             }
         }
     }

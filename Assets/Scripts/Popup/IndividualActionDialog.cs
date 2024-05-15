@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Assets.Scripts.Popup
 {
-    public class ActionDialog: IActionDialog
+    public class IndividualActionDialog: IActionDialog
     {
         public TextMeshProUGUI StudentName;
         public TextMeshProUGUI ProblemOfStudent;
@@ -24,21 +24,22 @@ namespace Assets.Scripts.Popup
 
         public void Start()
         {
-            HidePopup();
+           //HidePopup();
         }
 
-        public override void ShowPopup()
+        public void ShowPopup()
         {
             // Should also process problem and student.
             base.ShowPopup();
             UpdateSolution();
             ChangeText();
         }
-
-        public override void HidePopup()
+        
+        public void DestroyPopup()
         {
-            base.HidePopup();
+            HidePopup();
         }
+        
 
         public override void UpdateSolution()
         {

@@ -10,26 +10,31 @@ namespace Assets.Scripts.ProblemClass
 {
     public class ProblemManager: MonoBehaviour
     {
-        public ActionDialog IndividualDialog;
-        public IActionDialog GlobalActionDialog;
+        public IndividualActionDialog IndividualDialog;
+        public GlobalActionDialog GlobalActionDialog;
 
         public List<Problem> ProblemList;
         
 
-        public ActionDialog GetIndividualDialog()
+        public IndividualActionDialog GetIndividualDialog()
         {
+            if (IndividualDialog == null)
+            {
+                Debug.LogError("Failed to get a valid dialog from IndividualDialog! blaah");
+            }
             return IndividualDialog;
         }
 
-        public IActionDialog GetGlobalActionDialog()
+        public GlobalActionDialog GetGlobalActionDialog()
         {
+            if (GlobalActionDialog == null)
+            {
+                Debug.LogError("Failed to get a valid dialog from GlobalActionDialog!");
+            }
+            
             return GlobalActionDialog;
         }
 
-        //public Problem GenerateRandomProblem()
-        //{
-        //    // Temp solution, will be replaced with random generated problem
-        //    //return ProblemList.First();
-        //}
+     
     }
 }

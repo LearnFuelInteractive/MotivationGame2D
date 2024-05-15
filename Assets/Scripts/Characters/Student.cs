@@ -16,6 +16,8 @@ namespace Assets.Scripts.Characters
         public Problem currentProblem;
         public ProblemManager problemManager;
 
+        public bool isInRange;
+
         // Temp variabels.
         public float problemMeter = 40;
         public float AcceptanceCriteria = 0;
@@ -77,7 +79,7 @@ namespace Assets.Scripts.Characters
                 // Puts game object under spawn point
                 spawnedPopup.transform.SetParent(spawnPoint.transform);
 
-                var problemPopUp = spawnedPopup.GetComponent<ProblemPopup>();
+                var problemPopUp = spawnedPopup.GetComponent<IndividualActionPopup>();
                 if (problemPopUp != null)
                 {
                     problemPopUp.originStudent = this;
@@ -86,6 +88,34 @@ namespace Assets.Scripts.Characters
                     popup = spawnedPopup;
                 }
             }
+        }
+        
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                isInRange = true;
+
+            }
+        }
+
+        public void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                isInRange = false;
+            }
+        }
+
+        public bool IsInRange
+        {
+            get => isInRange;
+        }
+        
+        
+        public void DestroyProblemPopup()
+        {
+            Destroy(popup);
         }
     }
 }

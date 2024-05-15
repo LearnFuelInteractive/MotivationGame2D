@@ -15,7 +15,7 @@ public class TimeManager : MonoBehaviour
         this.timeText.text = this.startTime;
         this.endTimeText.text = "Class ends: " + this.endTime;
         
-        InvokeRepeating(nameof(IncreaseTime), 1 ,1); //test to see if the time increases
+       // InvokeRepeating(nameof(IncreaseTime), 1 ,1); //test to see if the time increases
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class TimeManager : MonoBehaviour
     
     public void IncreaseTime()
     {
+        Debug.Log("Ticking the time !");
         string[] time = this.timeText.text.Split(':');
         int hour = int.Parse(time[0]);
         int minute = int.Parse(time[1]);
