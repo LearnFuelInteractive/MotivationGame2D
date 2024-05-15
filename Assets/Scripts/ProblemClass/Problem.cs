@@ -50,7 +50,6 @@ namespace Assets.Scripts.ProblemClass {
             this.RelevantStudent = student;
         }
     }
-
 }
 
 
