@@ -13,24 +13,19 @@ namespace Assets.Scripts.ProblemClass
     public abstract class IProblem: MonoBehaviour
     {
         public GameObject ProblemIcon;
-        public string ProblemName = "Bored student";
-        public string ProblemExplanation = "Default value";
+        
         public Student RelevantStudent;
         public CompetenceType CompetenceType;
         public float AcceptanceCriteria;
+        public string ProblemName = "Bored student";
+        public string ProblemExplanation = "Default value";
+
+        // Minimal and maximum values;
+        public float MinimumValue = 10.0f;
+        public float MaximumValue = 60.0f;
 
         public abstract void Affect();
+        public abstract void GenerateAcceptanceCriteria();
 
-        public void GenerateRandomAcceptanceCriteria()
-        {
-            float underBound = 40.0f;
-            float upperBound = 100.0f;
-            float range = upperBound - underBound;
-            Random random = new();
-            var value = (float)random.NextDouble() * range;
-            Debug.Log($"AcceptanceCriteria generated is {value}");
-            // Generates random value between 0 and 100
-            AcceptanceCriteria = value;
-        }
     }
 }

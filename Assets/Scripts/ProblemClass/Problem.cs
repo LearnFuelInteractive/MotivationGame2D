@@ -3,6 +3,7 @@ using Assets.Scripts.Other;
 using Assets.Scripts.Popup;
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Assets.Scripts.ProblemClass {
     
@@ -13,7 +14,7 @@ namespace Assets.Scripts.ProblemClass {
         void Start()
         {
             // Apply standard acceptancecriteria, before influence of student.
-            GenerateRandomAcceptanceCriteria();
+            GenerateAcceptanceCriteria();
         }
 
         public string ProblemType()
@@ -35,6 +36,13 @@ namespace Assets.Scripts.ProblemClass {
             {
                 AcceptanceCriteria *= (valueOfType + 1);
             }
+        }
+
+        public override void GenerateAcceptanceCriteria()
+        {
+            float acceptanceCriteria = Random.Range(MinimumValue, MaximumValue);
+            Debug.Log("Acceptance criteria is " + acceptanceCriteria);
+            AcceptanceCriteria = acceptanceCriteria;
         }
     }
 

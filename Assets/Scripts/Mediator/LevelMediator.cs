@@ -35,7 +35,7 @@ namespace Assets.Scripts.Mediator
                 ReactToStudent(solution);
             }
             // Spend energy.
-
+            Debug.Log($"Spend time: {solution.TimeNeeded}");
             // Notify mentor
             ReactToMentor();
         }
