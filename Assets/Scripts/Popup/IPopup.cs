@@ -31,8 +31,7 @@ namespace Assets.Scripts.Popup
             {
                 try
                 {
-                   // instantiatedPopUp = Instantiate(gameObject); // doesnt work
-                    instantiatedPopUp = Instantiate(popUp); // doesnt work
+                    instantiatedPopUp = Instantiate(popUp);
                     Debug.Log("Created: " + instantiatedPopUp, instantiatedPopUp);
                 }
                 catch (Exception e)

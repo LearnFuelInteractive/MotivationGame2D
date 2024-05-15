@@ -17,7 +17,11 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
     //// Temp variable, will be replaced with a service locator to the ProblemManager.
     //// Later variables will ensure that only if the student has been touched, that the popup will be clickable.
     public ProblemManager problemManager;
-    
+
+    private void Start()
+    {
+        this.problemManager = FindObjectOfType<ProblemManager>();
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -50,6 +54,7 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
         }
         // Dialog needs to be instantiated before student can be assigned.
         // dialog.ShowPopup();
+        // This should be fixed!
         var instantiatedPopup = Instantiate(dialog);
 
         instantiatedPopup.Student = originStudent;
@@ -62,11 +67,5 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
     public void RemovePopup()
     {
         HidePopup();
-    }
-
-
-    private void Start()
-    {
-        this.problemManager = FindObjectOfType<ProblemManager>();
     }
 }

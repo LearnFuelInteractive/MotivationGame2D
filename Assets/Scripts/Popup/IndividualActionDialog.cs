@@ -26,8 +26,6 @@ namespace Assets.Scripts.Popup
         {
             // Should also process problem and student.
             base.ShowPopup();
-            // UpdateSolution();
-            // ChangeText();
         }
         
         public void DestroyPopup()
@@ -39,7 +37,7 @@ namespace Assets.Scripts.Popup
         {
             Debug.Log("Destroy popup. Overridden method");
             Destroy(popUp);
-            //base.HidePopup();
+            // base.HidePopup();
         }
 
         public override void UpdateSolution()

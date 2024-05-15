@@ -3,24 +3,23 @@ using Assets.Scripts.ProblemClass;
 using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Characters
 {
     public class Student : Character
     {
         public Persona persona;
-        public GameObject popup;
+        public GameObject prefabpopup;
         public IMediator mediator;
 
         // currentProblem, this can be null or not
-        public Problem currentProblem;
+        public Problem? currentProblem;
         public ProblemManager problemManager;
 
-        public bool isInRange;
+        public GameObject concretePopup;
 
-        // Temp variabels.
-        public float problemMeter = 40;
-        public float AcceptanceCriteria = 0;
+        public bool isInRange;
 
         private void Start()
         {
@@ -34,20 +33,22 @@ namespace Assets.Scripts.Characters
         }
 
         public override void ApplySolution(ASolution solution)
-        {
-            Debug.Log("Passes through student.");
+        {            
             var HasSolved = solution.SolveProblem(this);
-
             if (HasSolved)
             {
-                DestroyImmediate(popup, true);
+                DestroyImmediate(concretePopup, true);
+                DestroyImmediate(currentProblem, true);
+                UnAssignProblem();
             }
         }
 
         public void DestroyPopup()
         {
-            Debug.Log("Destroy popup");
-            Destroy(popup);
+            Debug.LogWarning("Destroy popup");
+            DestroyImmediate(concretePopup, true);
+            DestroyImmediate(currentProblem, true);
+            UnAssignProblem();
         }
 
         public override void Respond()
@@ -73,19 +74,18 @@ namespace Assets.Scripts.Characters
 
         public override void SpawnPopup()
         {
+            Debug.LogWarning($"Passes through student. By {Name}");
             if (currentProblem != null)
             {
-                GameObject spawnedPopup = Instantiate(popup, spawnPoint.position, Quaternion.identity);
+                concretePopup = Instantiate(prefabpopup, spawnPoint.position, Quaternion.identity);
                 // Puts game object under spawn point
-                spawnedPopup.transform.SetParent(spawnPoint.transform);
+                concretePopup.transform.SetParent(spawnPoint.transform);
 
-                var problemPopUp = spawnedPopup.GetComponent<IndividualActionPopup>();
+                var problemPopUp = concretePopup.GetComponent<IndividualActionPopup>();
                 if (problemPopUp != null)
                 {
                     problemPopUp.originStudent = this;
                     problemPopUp.problemManager = problemManager;
-
-                    popup = spawnedPopup;
                 }
             }
         }
@@ -115,7 +115,7 @@ namespace Assets.Scripts.Characters
         
         public void DestroyProblemPopup()
         {
-            Destroy(popup);
+            Destroy(concretePopup);
         }
     }
 }

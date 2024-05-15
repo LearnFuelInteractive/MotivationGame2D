@@ -18,6 +18,7 @@ namespace Assets.Scripts.Mediator
         public LevelManager levelManager;
 
         public UnityEvent SpentTimeAction;
+        public UnityEvent SentProblemSolved;
 
         private void Start()
         {
@@ -53,6 +54,12 @@ namespace Assets.Scripts.Mediator
                 if (hasSolved)
                 {
                     Debug.Log("Has solved the issue.");
+                    studentObject.DestroyPopup();
+                    SentProblemSolved.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Global action did not solve problem.");
                 }
             }
         }
@@ -65,6 +72,7 @@ namespace Assets.Scripts.Mediator
             {
                 Debug.Log("This problem has been solved.");
                 currentStudent.DestroyPopup();
+                SentProblemSolved.Invoke();
             }
             else
             {

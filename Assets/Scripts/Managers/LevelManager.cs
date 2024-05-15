@@ -13,7 +13,9 @@ public class LevelManager : MonoBehaviour
     public List<Problem> connectionProblems = new List<Problem>();
     public List<Problem> competencyProblems = new List<Problem>();
     public List<Problem> autonomyProblems = new List<Problem>();
-    public List<Problem> activeProblems = new List<Problem>();
+
+    public int activeProblems = 0;
+
     public int maxNumberOfProblems = 2;
     public float mintimeBetweenProblems = 10;
     public float maxtimeBetweenProblems = 20;
@@ -36,7 +38,7 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnProblem()
     {
-        if(timeLeftUntilProblem < 0 && activeProblems.Count < maxNumberOfProblems)
+        if(timeLeftUntilProblem < 0 && activeProblems < maxNumberOfProblems)
         {
             var studentWithProblem = students[Random.Range(0, students.Count)];
             Student studentObject = studentWithProblem.GetComponent<Student>();
@@ -63,7 +65,6 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
             student.AssignProblem(copy);
             copy.RelevantStudent = student;
-            activeProblems.Add(copy);
         }
         else if (randomFloat <= (persona.Competence + persona.Connection))
         {
@@ -73,7 +74,6 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
             student.AssignProblem(copy);
             copy.RelevantStudent = student;
-            activeProblems.Add(copy);
         }
         else
         {
@@ -82,14 +82,32 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
             student.AssignProblem(copy);
             copy.RelevantStudent = student;
-            activeProblems.Add(copy);
         }
+        IncrementProblem();
+    }
 
+    public void DecrementProblem()
+    {
+        if (activeProblems > 0)
+        {
+            activeProblems--;
+        }
+        
+    }
+
+    public void IncrementProblem()
+    {
+        activeProblems++;
     }
 
 
     public void LoadStudentsIntoLevelManager()
     {
+        int i = 0;
         this.students.AddRange(GameObject.FindGameObjectsWithTag("Student"));
+        students.ForEach(s => {
+            s.GetComponent<Student>().Name = $"Student {i}";
+            i++;
+            });
     }
 }
