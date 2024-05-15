@@ -21,13 +21,11 @@ public class AudioManager : MonoBehaviour
 
     public void EnableWalkingSound()
     {
-        Debug.Log("Walking");
         WalkingSound.enabled = true;
     }
 
     public void DisableWalkingSound()
     {
-        Debug.Log("Stoped Walking");
         WalkingSound.enabled = false;
     }
 }

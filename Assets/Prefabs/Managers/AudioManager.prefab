@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ff3acb2fd3c5247a9147274246e2e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SolvedProblemAudio: {fileID: 0}
-  FailedToSolveProblemAudio: {fileID: 0}
-  WalkingSound: {fileID: 0}
+  SolvedProblemAudio: {fileID: 2329860199648625976}
+  FailedToSolveProblemAudio: {fileID: 8350096128339943421}
+  WalkingSound: {fileID: 1729232741544457201}
 --- !u!82 &8350096128339943421
 AudioSource:
   m_ObjectHideFlags: 0
