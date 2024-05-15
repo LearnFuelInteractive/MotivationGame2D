@@ -14,8 +14,6 @@ namespace Assets.Scripts.Popup
 
         private void Start()
         {
-            // Default setting
-            //HidePopup();
             // Will retrieve all global solutions of children.
             Mediator = GameObject.FindFirstObjectByType <LevelMediator>();
         }

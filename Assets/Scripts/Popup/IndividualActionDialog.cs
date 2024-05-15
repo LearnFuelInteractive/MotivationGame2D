@@ -6,12 +6,12 @@ using System.Collections.Generic;
 
 namespace Assets.Scripts.Popup
 {
-    public class IndividualActionDialog: IActionDialog
+    public class IndividualActionDialog : IActionDialog
     {
         public TextMeshProUGUI StudentName;
         public TextMeshProUGUI ProblemOfStudent;
 
-        public Student student;
+        public Student Student;
         // Only for Individual action: The problem this dialog is called upon
         // Optional: The student to which a solution needs to be applied upon.
 
@@ -22,17 +22,12 @@ namespace Assets.Scripts.Popup
         // When player has clicked upon problem, a dialog screen should be spawned and all other elements should be blacked out.
         // Focus should be aimed at player, student and dialog.
 
-        public void Start()
-        {
-           //HidePopup();
-        }
-
-        public void ShowPopup()
+        public override void ShowPopup()
         {
             // Should also process problem and student.
             base.ShowPopup();
-            UpdateSolution();
-            ChangeText();
+            // UpdateSolution();
+            // ChangeText();
         }
         
         public void DestroyPopup()
@@ -43,15 +38,15 @@ namespace Assets.Scripts.Popup
 
         public override void UpdateSolution()
         {
-            solutions.ForEach(s => s.TargetedStudent = student);
+            solutions.ForEach(s => s.TargetedStudent = Student);
         }
 
         public void ChangeText()
         {
-            if(student != null)
+            if(Student != null)
             {
-                StudentName.text = student.Name;
-                ProblemOfStudent.text = student.currentProblem.ProblemName;
+                StudentName.text = Student.Name;
+                ProblemOfStudent.text = Student.currentProblem.ProblemName;
             }
             else
             {

@@ -532,9 +532,9 @@ MonoBehaviour:
   - {fileID: 5239769686695873754}
   - {fileID: 6673640316133997132}
   - {fileID: 5077006580857961219}
-  StudentName: {fileID: 0}
-  ProblemOfStudent: {fileID: 0}
-  student: {fileID: 0}
+  StudentName: {fileID: 4036463227852730828}
+  ProblemOfStudent: {fileID: 6194765205289007638}
+  Student: {fileID: 0}
 --- !u!1 &2573672704212765990
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerBar: {fileID: 3168002199207808883}
-  timeForBar: 3
+  timeForBar: 10
   failMessagePopup: {fileID: 4595308400292169925, guid: 6e9487bdc95980b47a8db84a58a15c19, type: 3}
   locationOfPopup: {fileID: 6180871712538961138}
   canvas: {fileID: 2000552893692200905}
@@ -1312,7 +1312,19 @@ MonoBehaviour:
   Name: 
   confirmChoice:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825213376848815900}
+        m_TargetAssemblyTypeName: Assets.Scripts.Popup.IActionDialog, Assembly-CSharp
+        m_MethodName: HidePopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TargetedStudent: {fileID: 0}
   CompetenceType: 0
   StandardValue: 40
@@ -1468,7 +1480,19 @@ MonoBehaviour:
   Name: 
   confirmChoice:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825213376848815900}
+        m_TargetAssemblyTypeName: Assets.Scripts.Popup.IActionDialog, Assembly-CSharp
+        m_MethodName: HidePopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TargetedStudent: {fileID: 0}
   CompetenceType: 0
   StandardValue: 40
@@ -1916,7 +1940,19 @@ MonoBehaviour:
   Name: 
   confirmChoice:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825213376848815900}
+        m_TargetAssemblyTypeName: Assets.Scripts.Popup.IActionDialog, Assembly-CSharp
+        m_MethodName: HidePopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TargetedStudent: {fileID: 0}
   CompetenceType: 0
   StandardValue: 40
@@ -2570,8 +2606,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets.Scripts.Popup.ActionDialog, Assembly-CSharp
+      - m_Target: {fileID: 825213376848815900}
+        m_TargetAssemblyTypeName: Assets.Scripts.Popup.IActionDialog, Assembly-CSharp
         m_MethodName: HidePopup
         m_Mode: 1
         m_Arguments:
@@ -2732,7 +2768,19 @@ MonoBehaviour:
   Name: 
   confirmChoice:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825213376848815900}
+        m_TargetAssemblyTypeName: Assets.Scripts.Popup.IActionDialog, Assembly-CSharp
+        m_MethodName: HidePopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TargetedStudent: {fileID: 0}
   CompetenceType: 0
   StandardValue: 40

@@ -14,7 +14,6 @@ namespace Assets.Scripts.Solution.GlobalSolutions
             Mediator.Notify(this, val);
 
             // Something to spend energy.
-
             // Closes dialog.
             ConfirmAction();
         }
@@ -23,7 +22,7 @@ namespace Assets.Scripts.Solution.GlobalSolutions
         {
             Debug.Log("Global solution applied");
             // If character did not have any problem, just return false.
-            if(character.HasProblem())
+            if(!character.HasProblem())
             {
                 // Something with relevant feedback about it.
                 return false;

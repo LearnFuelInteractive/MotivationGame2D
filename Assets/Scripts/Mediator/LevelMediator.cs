@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Mediator
 {
@@ -15,6 +16,8 @@ namespace Assets.Scripts.Mediator
         // Refers to student currently using the mediator.
         public Student currentStudent;
         public LevelManager levelManager;
+
+        public UnityEvent SpentTimeAction;
 
         private void Start()
         {
@@ -36,6 +39,7 @@ namespace Assets.Scripts.Mediator
             }
             // Spend energy.
             Debug.Log($"Spend time: {solution.TimeNeeded}");
+            SpentTimeAction.Invoke();
             // Notify mentor
             ReactToMentor();
         }

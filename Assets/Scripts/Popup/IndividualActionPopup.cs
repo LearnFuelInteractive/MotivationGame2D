@@ -48,10 +48,13 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
             Debug.LogError("Failed to get a valid dialog from ProblemManager!");
             return;
         }
-
-        dialog.student = originStudent;
+        // Dialog needs to be instantiated before student can be assigned.
         dialog.ShowPopup();
-        
+
+        dialog.Student = originStudent;
+        Debug.Log($"Name of dialog student {originStudent.Name}");
+        dialog.UpdateSolution();
+        dialog.ChangeText();
         Debug.Log("Individual action: Open dialog.");
     }
 
