@@ -50,9 +50,8 @@ namespace Assets.Scripts.Characters
 
         public void DestroyPopup()
         {
-            Debug.LogWarning("Destroy popup");
-            DestroyImmediate(concretePopup, true);
-            DestroyImmediate(currentProblem, true);
+            Destroy(concretePopup);
+            Destroy(currentProblem.gameObject);
             UnAssignProblem();
         }
 
@@ -79,7 +78,6 @@ namespace Assets.Scripts.Characters
 
         public override void SpawnPopup()
         {
-            Debug.LogWarning($"Passes through student. By {Name}");
             if (currentProblem != null)
             {
                 concretePopup = Instantiate(prefabpopup, spawnPoint.position, Quaternion.identity);

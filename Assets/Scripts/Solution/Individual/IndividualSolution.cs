@@ -38,6 +38,11 @@ public class IndividualSolution : ASolution
     // Apply the effects of the solution to the character
     public override bool SolveProblem(Student character)
     {
+        // Validate if characters problem exists.
+        if(!character.HasProblem())
+        {
+            return false;
+        }
         Problem problem = character.currentProblem;
         // Apply the effect.
         problem.Affect();
