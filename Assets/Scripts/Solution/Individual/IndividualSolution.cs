@@ -47,7 +47,7 @@ public class IndividualSolution : ASolution
         float personaModifier = character.persona.GetCompetence(CompetenceType);
         // If percentage 0 - 100, it will divide it to single 
         // If personal skill value is high, the modifier should be minimal
-        float answer = StandardValue + (1 + otherModifiers / 100.0f) + (1 + (1 - personaModifier));
+        float answer = StandardValue * (1 + otherModifiers / 100.0f) * (1 + (1 - personaModifier));
         // If solution competence and problem competence match,
         if (problem.CompetenceType.Equals(CompetenceType))
         {

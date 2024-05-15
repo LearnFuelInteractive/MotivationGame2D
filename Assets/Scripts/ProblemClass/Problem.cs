@@ -35,7 +35,6 @@ namespace Assets.Scripts.ProblemClass {
             {
                 AcceptanceCriteria *= (valueOfType + 1);
             }
-            
         }
     }
 

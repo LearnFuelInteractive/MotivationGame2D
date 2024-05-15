@@ -59,28 +59,30 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Competence");
             var problem = competencyProblems[Random.Range(0, competencyProblems.Count)];
-            Debug.Log($"Acceptance criteria on creation is {problem.AcceptanceCriteria}");
-            student.AssignProblem(problem);
-            problem.RelevantStudent = student;
-            activeProblems.Add(problem);
+            Problem copy = Instantiate(problem);
+            Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
+            student.AssignProblem(copy);
+            copy.RelevantStudent = student;
+            activeProblems.Add(copy);
         }
         else if (randomFloat <= (persona.Competence + persona.Connection))
         {
             var problem = connectionProblems[Random.Range(0, competencyProblems.Count)];
-            student.AssignProblem(problem);
-            problem.RelevantStudent = student;
-            Debug.Log("Connection");
-            activeProblems.Add(problem);
 
+            Problem copy = Instantiate(problem);
+            Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
+            student.AssignProblem(copy);
+            copy.RelevantStudent = student;
+            activeProblems.Add(copy);
         }
         else
         {
             var problem = autonomyProblems[Random.Range(0, competencyProblems.Count)];
-            student.AssignProblem(problem);
-            problem.RelevantStudent = student;
-            Debug.Log("Autonomy");
-            activeProblems.Add(problem);
-
+            Problem copy = Instantiate(problem);
+            Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
+            student.AssignProblem(copy);
+            copy.RelevantStudent = student;
+            activeProblems.Add(copy);
         }
 
     }

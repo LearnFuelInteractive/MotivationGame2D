@@ -23,7 +23,7 @@ namespace Assets.Scripts.ProblemClass
 
         public void GenerateRandomAcceptanceCriteria()
         {
-            float underBound = 0.0f;
+            float underBound = 40.0f;
             float upperBound = 100.0f;
             float range = upperBound - underBound;
             Random random = new();

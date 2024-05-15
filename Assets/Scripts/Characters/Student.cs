@@ -60,6 +60,7 @@ namespace Assets.Scripts.Characters
 
         public void AssignProblem(Problem problem)
         {
+            problem.RelevantStudent = this;
             currentProblem = problem;
         }
 
