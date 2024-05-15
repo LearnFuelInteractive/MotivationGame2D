@@ -24,7 +24,5 @@ namespace Assets.Scripts.Characters
 
         public abstract void Respond();
         public abstract void SpawnPopup();
-        public abstract void ApplySolution(ASolution solutio);
-
     }
 }
