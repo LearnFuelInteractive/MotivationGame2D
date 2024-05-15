@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43d44d5b-2280-4033-a2c5-3d0db05625a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MotivationGame2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MotivationGame2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClassroomScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClassroomScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/GlobalActionDialog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/GlobalActionDialog.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup/GlobalActionDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup/GlobalActionDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup/IPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup/IPopup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "TimeIncreaseOnCall",
+    "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,6 +99,7 @@
       <workItem from="1715699106485" duration="10169000" />
       <workItem from="1715709534201" duration="1689000" />
       <workItem from="1715711264271" duration="1571000" />
+      <workItem from="1715759232200" duration="320000" />
     </task>
     <servers />
   </component>

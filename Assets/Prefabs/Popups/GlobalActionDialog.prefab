@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUp: {fileID: 786287340907435018}
-  parentTransform: {fileID: 0}
   solutions:
   - {fileID: 0}
 --- !u!1 &1188101332422301972
