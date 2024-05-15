@@ -37,9 +37,14 @@ namespace Assets.Scripts.Characters
             var HasSolved = solution.SolveProblem(this);
             if (HasSolved)
             {
+                Debug.Log("Problem successfully solved");
                 DestroyImmediate(concretePopup, true);
                 DestroyImmediate(currentProblem, true);
                 UnAssignProblem();
+            } else
+            {
+                Debug.Log("Failed to solve problem");
+
             }
         }
 

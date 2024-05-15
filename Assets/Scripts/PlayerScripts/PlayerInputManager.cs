@@ -8,6 +8,8 @@ public class PlayerInputManager : MonoBehaviour
 {
     public UnityEvent<Vector2> moveEvent;
     public UnityEvent<bool> sprintEvent;
+    public UnityEvent startMoving;
+    public UnityEvent stopMoving;
     public Animator animator;
     private Vector2 movementInput;
     
@@ -36,10 +38,12 @@ public class PlayerInputManager : MonoBehaviour
             animator.SetFloat("XInput", movementInput.x);
             animator.SetFloat("YInput", movementInput.y);
             animator.SetBool("IsWalking", true);
+            startMoving.Invoke();
+
         } else
         {
             animator.SetBool("IsWalking", false);
-
+            stopMoving.Invoke();
         }
 
 

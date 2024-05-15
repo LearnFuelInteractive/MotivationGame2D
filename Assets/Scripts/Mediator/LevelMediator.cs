@@ -19,7 +19,7 @@ namespace Assets.Scripts.Mediator
 
         public UnityEvent SpentTimeAction;
         public UnityEvent SentProblemSolved;
-
+        public UnityEvent SentProblemNotSolved;
         private void Start()
         {
             levelManager = FindAnyObjectByType<LevelManager>();
@@ -60,6 +60,7 @@ namespace Assets.Scripts.Mediator
                 else
                 {
                     Debug.Log("Global action did not solve problem.");
+                    SentProblemNotSolved.Invoke();
                 }
             }
         }
@@ -77,6 +78,7 @@ namespace Assets.Scripts.Mediator
             else
             {
                 Debug.Log("This problem is not solved.");
+                SentProblemNotSolved.Invoke();
             }
         }
 
