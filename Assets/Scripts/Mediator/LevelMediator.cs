@@ -39,7 +39,6 @@ namespace Assets.Scripts.Mediator
                 ReactToStudent(solution);
             }
             // Spend energy.
-            Debug.Log($"Spend time: {solution.TimeNeeded}");
             SpentTimeAction.Invoke();
             // Notify mentor
             ReactToMentor();
@@ -66,7 +65,6 @@ namespace Assets.Scripts.Mediator
 
         private void ReactToStudent(ASolution solution)
         {
-            Debug.Log("Mediator solves single problem.");
             currentStudent = solution.TargetedStudent;
             if (solution.SolveProblem(currentStudent))
             {
