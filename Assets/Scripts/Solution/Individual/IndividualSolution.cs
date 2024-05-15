@@ -32,7 +32,7 @@ public class IndividualSolution : ASolution
         var value = "Single";
         Mediator.Notify(this, value);
         // Close popup.
-        confirmChoice.Invoke();
+        ConfirmAction();
     }
 
     // Apply the effects of the solution to the character
@@ -70,5 +70,6 @@ public class IndividualSolution : ASolution
 
     public override void ConfirmAction()
     {
+        confirmChoice.Invoke();
     }
 }

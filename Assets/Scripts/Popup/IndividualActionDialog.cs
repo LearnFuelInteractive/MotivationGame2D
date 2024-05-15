@@ -34,7 +34,13 @@ namespace Assets.Scripts.Popup
         {
             HidePopup();
         }
-        
+
+        public override void HidePopup()
+        {
+            Debug.Log("Destroy popup. Overridden method");
+            Destroy(popUp);
+            //base.HidePopup();
+        }
 
         public override void UpdateSolution()
         {
