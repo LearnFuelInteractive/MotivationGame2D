@@ -10,13 +10,11 @@ namespace Assets.Scripts.Popup
     {
         public bool hasOpened;
 
-        public GlobalActionSpawn parent; // popclone?
+        public GlobalActionSpawn parent;
         private GlobalActionDialog dialog;
 
         public ProblemManager problemManager;
         
-       
-
         public void OnPointerClick(PointerEventData eventData)
         {
             Debug.Log("Clicked on global action popup.");

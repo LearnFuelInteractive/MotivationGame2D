@@ -29,20 +29,7 @@ namespace Assets.Scripts.Solution
         // Works with both individual and global actions.
         public override bool SolveProblem(Student character)
         {
-            // Picks the relevant modifier
-            float improvedCompetence = character.problemMeter - competenceGrade;
-            // Applies 
-            character.problemMeter = improvedCompetence;
-            // Adds the solution modifiers
-            // Calculate chance, replace number with relevant script.
-            var randomNumber = 2;
-            // Validate acceptance criteria;
-            var acceptanceCriteria = character.AcceptanceCriteria;
-            // If successfull, destroy popup.
-            var validSolution = CheckAcceptanceCriteria(acceptanceCriteria, randomNumber);
-            // Apply modifier as new value to persona.
-            // Otherwise a negative popup for 2 seconds should show up.
-            return validSolution;
+            return true;
         }
         
         public override bool CheckAcceptanceCriteria(float acceptanceCriteria, float value)

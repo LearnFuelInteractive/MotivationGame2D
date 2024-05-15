@@ -13,7 +13,9 @@ public class LevelManager : MonoBehaviour
     public List<Problem> connectionProblems = new List<Problem>();
     public List<Problem> competencyProblems = new List<Problem>();
     public List<Problem> autonomyProblems = new List<Problem>();
-    public List<Problem> activeProblems = new List<Problem>();
+
+    public int activeProblems = 0;
+
     public int maxNumberOfProblems = 2;
     public float mintimeBetweenProblems = 10;
     public float maxtimeBetweenProblems = 20;
@@ -36,7 +38,7 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnProblem()
     {
-        if(timeLeftUntilProblem < 0 && activeProblems.Count < maxNumberOfProblems)
+        if(timeLeftUntilProblem < 0 && activeProblems < maxNumberOfProblems)
         {
             var studentWithProblem = students[Random.Range(0, students.Count)];
             Student studentObject = studentWithProblem.GetComponent<Student>();
@@ -59,37 +61,53 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Competence");
             var problem = competencyProblems[Random.Range(0, competencyProblems.Count)];
-            Instantiate(problem);
-            student.AssignProblem(problem);
-            problem.AssignStudent(student);
-            activeProblems.Add(problem);
+            Problem copy = Instantiate(problem);
+            Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
+            student.AssignProblem(copy);
+            copy.RelevantStudent = student;
         }
         else if (randomFloat <= (persona.Competence + persona.Connection))
         {
             var problem = connectionProblems[Random.Range(0, competencyProblems.Count)];
-            Instantiate(problem);
-            student.AssignProblem(problem);
-            problem.AssignStudent(student);
-            Debug.Log("Connection");
-            activeProblems.Add(problem);
 
+            Problem copy = Instantiate(problem);
+            Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
+            student.AssignProblem(copy);
+            copy.RelevantStudent = student;
         }
         else
         {
             var problem = autonomyProblems[Random.Range(0, competencyProblems.Count)];
-            Instantiate(problem);
-            student.AssignProblem(problem);
-            problem.AssignStudent(student);
-            Debug.Log("Autonomy");
-            activeProblems.Add(problem);
-
+            Problem copy = Instantiate(problem);
+            Debug.Log($"Acceptance criteria on creation is {copy.AcceptanceCriteria}");
+            student.AssignProblem(copy);
+            copy.RelevantStudent = student;
         }
+        IncrementProblem();
+    }
 
+    public void DecrementProblem()
+    {
+        if (activeProblems > 0)
+        {
+            activeProblems--;
+        }
+        
+    }
+
+    public void IncrementProblem()
+    {
+        activeProblems++;
     }
 
 
     public void LoadStudentsIntoLevelManager()
     {
+        int i = 0;
         this.students.AddRange(GameObject.FindGameObjectsWithTag("Student"));
+        students.ForEach(s => {
+            s.GetComponent<Student>().Name = $"Student {i}";
+            i++;
+            });
     }
 }
