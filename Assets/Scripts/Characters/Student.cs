@@ -32,7 +32,7 @@ namespace Assets.Scripts.Characters
             }
         }
 
-        public override void ApplySolution(ASolution solution)
+        public void ApplySolution(ASolution solution)
         {            
             var HasSolved = solution.SolveProblem(this);
             if (HasSolved)
