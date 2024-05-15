@@ -14,5 +14,15 @@ namespace Assets.Scripts.Popup
         public List<ASolution> solutions;
         // Contains all solutions in one place.
         public abstract void UpdateSolution();
+
+        public override void ShowPopup()
+        {
+            base.ShowPopup();
+        }
+
+        public override void HidePopup()
+        {
+            base.HidePopup();
+        }
     }
 }

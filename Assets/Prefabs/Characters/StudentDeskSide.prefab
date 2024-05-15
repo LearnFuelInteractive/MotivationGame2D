@@ -52,12 +52,12 @@ MonoBehaviour:
   spawnPoint: {fileID: 3523618114162023493}
   Name: Ingrid
   persona: {fileID: 0}
-  popup: {fileID: 5249099333701449841, guid: 34ab4f79f5a68414c8f175a67b6c2dfb, type: 3}
+  prefabpopup: {fileID: 5249099333701449841, guid: 34ab4f79f5a68414c8f175a67b6c2dfb, type: 3}
+  mediator: {fileID: 0}
   currentProblem: {fileID: 0}
   problemManager: {fileID: 1257943813135182407, guid: 8f29f127cfd710245b26e039ab3ceb68, type: 3}
+  concretePopup: {fileID: 0}
   isInRange: 0
-  problemMeter: 40
-  AcceptanceCriteria: 0
 --- !u!61 &-4685147088693022717
 BoxCollider2D:
   m_ObjectHideFlags: 0

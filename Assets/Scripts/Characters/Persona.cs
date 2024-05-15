@@ -1,4 +1,4 @@
-using System.Collections;
+using Assets.Scripts.Other;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,5 +30,16 @@ public class Persona : ScriptableObject
     public void ApplyConnectionModifier(float currentPercentage)
     {
         currentPercentage += (1 - Connection);
+    }
+
+    public float GetCompetence(CompetenceType competenceType)
+    {
+        var values = new Dictionary<CompetenceType, float>
+        {
+            { CompetenceType.COMPETENCE, Competence },
+            { CompetenceType.AUTONOMY, Autonomy },
+            { CompetenceType.CONNECTION, Connection }
+        };
+        return values.GetValueOrDefault(competenceType, 0.0f);
     }
 }

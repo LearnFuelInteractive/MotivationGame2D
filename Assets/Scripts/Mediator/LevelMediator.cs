@@ -5,25 +5,84 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Mediator
 {
-    public class LevelMediator : MonoBehaviour, IMediator
+    public class LevelMediator : IMediator
     {
+        // Mentor
 
-        // Temp value. Will need to be connected with level manager.
-        public List<Student> students;
+        // Refers to student currently using the mediator.
+        public Student currentStudent;
+        public LevelManager levelManager;
 
-        public void ApplySolutionToStudents(ASolution solution)
+        public UnityEvent SpentTimeAction;
+        public UnityEvent SentProblemSolved;
+
+        private void Start()
         {
-            foreach (var student in students)
+            levelManager = FindAnyObjectByType<LevelManager>();
+        }
+
+        public override void Notify(ASolution solution, string value)
+        {
+            Debug.Log($"Mediator notifies to {value}");
+            if (value.Equals("All"))
             {
-                var hasSolved = solution.SolveProblem(student);
+                Debug.Log("Mediator solves single problem.");
+                // Notify all students.
+                ApplySolutionToStudents(solution);
+            }
+            else if (value.Equals("Single"))
+            {
+                ReactToStudent(solution);
+            }
+            // Spend energy.
+            Debug.Log($"Spend time: {solution.TimeNeeded}");
+            SpentTimeAction.Invoke();
+            // Notify mentor
+            ReactToMentor();
+        }
+
+        private void ApplySolutionToStudents(ASolution solution)
+        {
+            foreach (var student in levelManager.students)
+            {
+                var studentObject = student.GetComponent<Student>();
+                var hasSolved = solution.SolveProblem(studentObject);
                 if (hasSolved)
                 {
-
+                    Debug.Log("Has solved the issue.");
+                    studentObject.DestroyPopup();
+                    SentProblemSolved.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Global action did not solve problem.");
                 }
             }
+        }
+
+        private void ReactToStudent(ASolution solution)
+        {
+            Debug.Log("Mediator solves single problem.");
+            currentStudent = solution.TargetedStudent;
+            if (solution.SolveProblem(currentStudent))
+            {
+                Debug.Log("This problem has been solved.");
+                currentStudent.DestroyPopup();
+                SentProblemSolved.Invoke();
+            }
+            else
+            {
+                Debug.Log("This problem is not solved.");
+            }
+        }
+
+        private void ReactToMentor()
+        {
+            Debug.Log("Mentor has reacted");
         }
     }
 }
