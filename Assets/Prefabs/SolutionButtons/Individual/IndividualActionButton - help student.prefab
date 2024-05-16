@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4105549688352964260, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_Name
-      value: IndividualActionButton - explain lesson
+      value: IndividualActionButton - help student
       objectReference: {fileID: 0}
     - target: {fileID: 5110064417243080326, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_text
-      value: Extra uitleg geven
+      value: Help student
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_fontSize
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65dc06b8c4ea11b4db4c2dacd78a9444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Extra uitleg geven
+  Name: Student individueel helpen
   confirmChoice:
     m_PersistentCalls:
       m_Calls: []

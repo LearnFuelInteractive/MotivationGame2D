@@ -527,9 +527,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUp: {fileID: 2000552893692200905}
   solutions:
-  - {fileID: 6956824588406506936}
-  - {fileID: 5239769686695873754}
-  - {fileID: 6673640316133997132}
+  - {fileID: -5801045194112592313, guid: 908a5ebc39026e24c8f5e2df25f27a73, type: 3}
+  - {fileID: -3742959176228894460, guid: ffc72b955fc637b4bbb99a59787612b9, type: 3}
+  - {fileID: -5801045194112592313, guid: 6fb1af946713a4d4fb906f2365af94ff, type: 3}
   StudentName: {fileID: 4036463227852730828}
   ProblemOfStudent: {fileID: 6194765205289007638}
   Student: {fileID: 0}

@@ -28,6 +28,8 @@ namespace Assets.Scripts.Mediator
         public override void Notify(ASolution solution, string value)
         {
             Debug.Log($"Mediator notifies to {value}");
+            Debug.Log($"Solution name: {solution.Name}");
+            levelManager.chosenSolutions.Add(solution.Name);
             if (value.Equals("All"))
             {
                 Debug.Log("Mediator solves single problem.");

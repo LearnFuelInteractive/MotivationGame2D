@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour
     public float maxtimeBetweenProblems = 20;
 
     private float timeLeftUntilProblem;
+
+    public List<string> chosenSolutions = new();
+
     // Update is called once per frame
 
     private void Start()

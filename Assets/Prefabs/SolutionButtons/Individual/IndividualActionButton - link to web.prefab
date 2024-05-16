@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_text
-      value: Link to web
+      value: Verwijs student naar website
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_fontSize
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65dc06b8c4ea11b4db4c2dacd78a9444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Verwijs student naar website
   confirmChoice:
     m_PersistentCalls:
       m_Calls: []
