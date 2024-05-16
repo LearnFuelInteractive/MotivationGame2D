@@ -4,6 +4,7 @@ using Assets.Scripts.Popup;
 using Assets.Scripts.ProblemClass;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Other;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -17,10 +18,15 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
     //// Temp variable, will be replaced with a service locator to the ProblemManager.
     //// Later variables will ensure that only if the student has been touched, that the popup will be clickable.
     public ProblemManager problemManager;
+    public GameObject[] emotionTypes;
 
     private void Start()
     {
         this.problemManager = FindObjectOfType<ProblemManager>();
+        // get parent of parent of this object
+        this.originStudent = transform.parent.parent.GetComponent<Student>();
+        Debug.Log("student name: " + originStudent.Name + " competency problem type " + originStudent.currentProblem.CompetenceType);
+        setEmotionBasedOnProblemType();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -67,5 +73,23 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
     public void RemovePopup()
     {
         HidePopup();
+    }
+
+    public void setEmotionBasedOnProblemType()
+    {
+        var currentproblem = originStudent.currentProblem.CompetenceType;
+        if (currentproblem == CompetenceType.AUTONOMY)
+        {
+            emotionTypes[0].SetActive(true);
+        }
+        else if (currentproblem == CompetenceType.COMPETENCE)
+        {
+            emotionTypes[1].SetActive(true);
+        }
+        else if (currentproblem == CompetenceType.CONNECTION)
+        {
+            emotionTypes[2].SetActive(true);
+        }
+        
     }
 }

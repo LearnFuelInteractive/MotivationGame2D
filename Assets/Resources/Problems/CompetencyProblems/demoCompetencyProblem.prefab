@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProblemIcon: {fileID: 6923509395146575482, guid: 894f8d09697c36b449786d528de15edb, type: 3}
   RelevantStudent: {fileID: 0}
-  CompetenceType: 0
+  CompetenceType: 1
   AcceptanceCriteria: 0
   ProblemName: Demo Competency Problem
   ProblemExplanation: Default value
