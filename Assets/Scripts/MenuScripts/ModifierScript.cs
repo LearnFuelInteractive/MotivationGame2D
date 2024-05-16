@@ -21,10 +21,10 @@ public class ModifierScript : MonoBehaviour
         summaryScreen.SetActive(true);
     }
 
-    public void SelectKahoot()
+    public void AddSelection(string name)
     {
-        if (!menuManager.modifiers.Contains(1))
-            menuManager.modifiers.Add(1);
-        // else show error message
+        Debug.Log("Henk");
+        if (menuManager.modifiers.Count < 3)
+            menuManager.modifiers.Add(name);
     }
 }

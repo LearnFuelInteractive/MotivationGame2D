@@ -16,16 +16,10 @@ namespace Assets.Scripts.ProblemClass
         
         public Student RelevantStudent;
         public CompetenceType CompetenceType;
-        public float AcceptanceCriteria;
+        public float AcceptanceCriteria = 55;
         public string ProblemName = "Bored student";
         public string ProblemExplanation = "Default value";
 
-        // Minimal and maximum values;
-        public float MinimumValue = 10.0f;
-        public float MaximumValue = 60.0f;
-
         public abstract void Affect();
-        public abstract void GenerateAcceptanceCriteria();
-
     }
 }

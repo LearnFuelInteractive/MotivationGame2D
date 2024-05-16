@@ -9,14 +9,6 @@ namespace Assets.Scripts.ProblemClass {
     
     public class Problem : IProblem
     {
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            // Apply standard acceptancecriteria, before influence of student.
-            GenerateAcceptanceCriteria();
-        }
-
         public string ProblemType()
         {
             return "There is a problem";
@@ -36,13 +28,6 @@ namespace Assets.Scripts.ProblemClass {
             {
                 AcceptanceCriteria *= (valueOfType + 1);
             }
-        }
-
-        public override void GenerateAcceptanceCriteria()
-        {
-            float acceptanceCriteria = Random.Range(MinimumValue, MaximumValue);
-            Debug.Log("Acceptance criteria is " + acceptanceCriteria);
-            AcceptanceCriteria = acceptanceCriteria;
         }
 
         public void AssignStudent(Student student)
