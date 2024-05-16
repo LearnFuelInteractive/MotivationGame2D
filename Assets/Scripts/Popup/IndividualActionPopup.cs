@@ -53,7 +53,7 @@ public class IndividualActionPopup : IPopup, IPointerClickHandler
             return;
         }
         // Dialog needs to be instantiated before student can be assigned.
-        // dialog.ShowPopup();
+        //dialog.ShowPopup();
         // This should be fixed!
         var instantiatedPopup = Instantiate(dialog);
 
