@@ -394,51 +394,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!1 &274199131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 274199133}
-  - component: {fileID: 274199132}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &274199132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274199131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4376b33b395aaee42943606b520214f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 310996793}
---- !u!4 &274199133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274199131}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5097938, y: -0.53648436, z: -1.8861884}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310996793
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +545,7 @@ MonoBehaviour:
   endTimeText: {fileID: 810853299}
   startTime: 13:00
   endTime: 13:30
+  levelManager: {fileID: 1814966262}
 --- !u!1 &427166330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2426374057039179694, guid: 5b4e9a7d039492941982451c15847e6c, type: 3}
@@ -2162,6 +2118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814966263}
   - component: {fileID: 1814966262}
+  - component: {fileID: 1814966264}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -2189,6 +2146,7 @@ MonoBehaviour:
   maxNumberOfProblems: 2
   mintimeBetweenProblems: 1
   maxtimeBetweenProblems: 2
+  chosenSolutions: []
 --- !u!4 &1814966263
 Transform:
   m_ObjectHideFlags: 0
@@ -2204,6 +2162,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1814966264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814966261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4376b33b395aaee42943606b520214f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 310996793}
 --- !u!1 &1850355595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1595753401354561790, guid: 7b47462f5fbe9a44995896a2a0174441, type: 3}
@@ -2592,7 +2563,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274199132}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
@@ -3004,4 +2975,3 @@ SceneRoots:
   - {fileID: 1102946346}
   - {fileID: 1432097822}
   - {fileID: 310996797}
-  - {fileID: 274199133}
