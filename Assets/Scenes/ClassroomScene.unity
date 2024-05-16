@@ -544,7 +544,7 @@ MonoBehaviour:
   timeText: {fileID: 949093617}
   endTimeText: {fileID: 810853299}
   startTime: 13:00
-  endTime: 13:30
+  endTime: 14:30
   levelManager: {fileID: 1814966262}
 --- !u!1 &427166330 stripped
 GameObject:

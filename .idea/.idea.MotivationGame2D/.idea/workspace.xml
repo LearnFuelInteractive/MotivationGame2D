@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="43d44d5b-2280-4033-a2c5-3d0db05625a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MotivationGame2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MotivationGame2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/IndividualActionPopup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/IndividualActionPopup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/Sprites/EmoijPopupsSprites/Autonomy.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/Sprites/EmoijPopupsSprites/Autonomy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/Sprites/EmoijPopupsSprites/Autonomy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/Sprites/EmoijPopupsSprites/Autonomy.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Problems/CompetencyProblems/demoCompetencyProblem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Problems/CompetencyProblems/demoCompetencyProblem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Problems/ConnectionProblems/demoConnectionProblem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Problems/ConnectionProblems/demoConnectionProblem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClassroomScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClassroomScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup/IndividualActionPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup/IndividualActionPopup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +104,7 @@
       <workItem from="1715709534201" duration="1689000" />
       <workItem from="1715711264271" duration="1571000" />
       <workItem from="1715759232200" duration="320000" />
+      <workItem from="1715870521415" duration="1425000" />
     </task>
     <servers />
   </component>
