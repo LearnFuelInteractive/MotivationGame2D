@@ -11,12 +11,12 @@ public class MenuManager : MonoBehaviour
     public int classLayout = 0;
 
     // Class modifiers
-    public List<string> modifiers = new();
+    public HashSet<string> modifiers;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.modifiers = new HashSet<string>(); 
     }
 
     // Update is called once per frame

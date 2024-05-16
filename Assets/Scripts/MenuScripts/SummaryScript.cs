@@ -51,31 +51,26 @@ public class SummaryScript : MonoBehaviour
             case 1:
                 {
                     classTypeText.text = "-Theorie";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
                     break;
                 }
             case 2:
                 {
                     classTypeText.text = "-Practicum";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "PracticalClassType");
                     break;
                 }
             case 3:
                 {
                     classTypeText.text = "-Hoorcollege";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "CollegeClassType");
                     break;
                 }
             case 4:
                 {
                     classTypeText.text = "-Groepsopdracht";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "GroupClassType");
                     break;
                 }
             default:
                 {
                     classTypeText.text = "-Theorie";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
                     break;
                 }
         }
@@ -115,10 +110,18 @@ public class SummaryScript : MonoBehaviour
 
     private void ModifiersCheck()
     {
-        for(int i = 0; i < menuManager.modifiers.Count; i++)
+        //for(int i = 0; i < menuManager.modifiers.Count; i++)
+        //{
+        //    modifierText += menuManager.modifiers[i] + ",";
+        //}
+
+        foreach(string modifier in menuManager.modifiers)
         {
-            modifierText += menuManager.modifiers[i] + ",";
+            Debug.Log(modifier);
+            modifierText += modifier + ",";
         }
+
+        Debug.Log("MODIFIER TEXT: " + modifierText);
         PlayerPrefs.SetString("SelectedLessonComponents", modifierText);
     }
 }

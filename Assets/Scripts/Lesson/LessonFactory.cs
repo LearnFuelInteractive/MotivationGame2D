@@ -68,7 +68,9 @@ public class LessonFactory
 
     public Lesson CreateLessonWithPlayerPrefs()
     {
+
         string chosenLessonName = PlayerPrefs.GetString("SelectedClassType");
+        Debug.Log("CHOSEN LESSON NAME:" + chosenLessonName);
         switch (chosenLessonName)
         {
             case "Theory": return CreateTheoryLesson();

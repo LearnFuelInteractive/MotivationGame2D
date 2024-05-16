@@ -23,7 +23,8 @@ public class ModifierScript : MonoBehaviour
 
     public void AddSelection(string name)
     {
-        if (!menuManager.modifiers.Contains(name) && menuManager.modifiers.Count < 3)
+        Debug.Log("Henk");
+        if (menuManager.modifiers.Count < 3)
             menuManager.modifiers.Add(name);
     }
 }
