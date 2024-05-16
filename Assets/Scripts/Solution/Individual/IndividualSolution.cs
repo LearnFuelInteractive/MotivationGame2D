@@ -9,9 +9,11 @@ public class IndividualSolution : ASolution
 {
     // For now a relation to level manager.
     public IMediator Mediator;
+    public LessonFactory LessonFactory;
 
     private void Start()
     {
+        LessonFactory = new LessonFactory();
         var mediator = FindFirstObjectByType<LevelMediator>();
         if (mediator != null)
         {
@@ -48,13 +50,16 @@ public class IndividualSolution : ASolution
         problem.Affect();
         // All of the values
         float acceptanceCriteria = problem.AcceptanceCriteria;
-        float otherModifiers = ApplyClassroomModifiers();
+
         float personaModifier = character.persona.GetCompetence(CompetenceType);
+        // Example 0.3
+        float classRoomModifier = ApplyClassroomModifiers();
+        // Example 0.4
         float personaDefinitveModifier = ApplyPersonaModifiers(personaModifier);
 
         // If percentage 0 - 100, it will divide it to single 
         // If personal skill value is high, the modifier should be minimal
-        float answer = StandardValue * otherModifiers * personaDefinitveModifier;
+        float answer = StandardValue * (1 + classRoomModifier + personaDefinitveModifier);
         // If solution competence and problem competence match,
         if (problem.CompetenceType.Equals(CompetenceType))
         {
@@ -83,12 +88,16 @@ public class IndividualSolution : ASolution
     private float ApplyClassroomModifiers()
     {
         // Here comes the modifier.
-        return 1.0f + 0.0f;
+        // var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
+
+        // float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.0f);
+        float relevantFactor = 1.0f;
+        return relevantFactor / 2;
     }
 
     private float ApplyPersonaModifiers(float personaModifier)
     {
         // Factor should not be higher then 50 percent.
-        return 1.0f + (personaModifier / 2.0f);
+        return personaModifier / 2.0f;
     }
 }

@@ -10,7 +10,9 @@ namespace Assets.Scripts.Popup
     {
         // Relation to mediator class
         // For now a relation to level manager.
-        public IMediator Mediator;
+        public LevelMediator Mediator;
+
+        private string selectedLessonComponentKey = "SelectedLessonComponents";
 
         private void Start()
         {
@@ -24,8 +26,10 @@ namespace Assets.Scripts.Popup
         private void ProcessSolutions(List<GlobalAction> loadedSolutions)
         {
             List<GlobalAction> selectedSolutions = new List<GlobalAction>();
-            string prefs = PlayerPrefs.GetString("SelectedLessonComponents");
-            List<string> chosenSolutions = prefs.Split(";").ToList();
+
+            string lessonType = PlayerPrefs.GetString(selectedLessonComponentKey);
+
+            List<string> chosenSolutions = lessonType.Split(";").ToList();
 
             loadedSolutions.ForEach(solution =>
             {
