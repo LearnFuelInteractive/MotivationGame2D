@@ -46,39 +46,39 @@ public class SummaryScript : MonoBehaviour
     private void ClassTypeCheck()
     {
 
-        switch (menuManager.classType)
-        {
-            case 1:
-                {
-                    classTypeText.text = "-Theorie";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
-                    break;
-                }
-            case 2:
-                {
-                    classTypeText.text = "-Practicum";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "PracticalClassType");
-                    break;
-                }
-            case 3:
-                {
-                    classTypeText.text = "-Hoorcollege";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "CollegeClassType");
-                    break;
-                }
-            case 4:
-                {
-                    classTypeText.text = "-Groepsopdracht";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "GroupClassType");
-                    break;
-                }
-            default:
-                {
-                    classTypeText.text = "-Theorie";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
-                    break;
-                }
-        }
+        //switch (menuManager.classType)
+        //{
+        //    case 1:
+        //        {
+        //            classTypeText.text = "-Theorie";
+        //            PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
+        //            break;
+        //        }
+        //    case 2:
+        //        {
+        //            classTypeText.text = "-Practicum";
+        //            PlayerPrefs.SetString(selectedClassTypeKey, "PracticalClassType");
+        //            break;
+        //        }
+        //    case 3:
+        //        {
+        //            classTypeText.text = "-Hoorcollege";
+        //            PlayerPrefs.SetString(selectedClassTypeKey, "CollegeClassType");
+        //            break;
+        //        }
+        //    case 4:
+        //        {
+        //            classTypeText.text = "-Groepsopdracht";
+        //            PlayerPrefs.SetString(selectedClassTypeKey, "GroupClassType");
+        //            break;
+        //        }
+        //    default:
+        //        {
+        //            classTypeText.text = "-Theorie";
+        //            PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
+        //            break;
+        //        }
+        //}
     }
 
     private void ClassLayoutCheck()

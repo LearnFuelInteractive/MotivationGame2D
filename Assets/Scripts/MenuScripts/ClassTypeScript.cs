@@ -14,7 +14,8 @@ public class ClassTypeScript : MonoBehaviour
 
     public void Selected(string lessonNameAndNumberCSV)
     {
-        PlayerPrefs.SetString("SelectedLesson", lessonNameAndNumberCSV.Split(',')[0]);  
+        Debug.Log("CHOSEN LESSON TYPE IN MENU: " + lessonNameAndNumberCSV.Split(',')[0]);
+        PlayerPrefs.SetString("SelectedClassType", lessonNameAndNumberCSV.Split(',')[0]);  
         menuManager.classType = int.Parse(lessonNameAndNumberCSV.Split(',')[1]);
     }
 
