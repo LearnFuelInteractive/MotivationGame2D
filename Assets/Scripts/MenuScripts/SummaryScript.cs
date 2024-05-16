@@ -115,23 +115,10 @@ public class SummaryScript : MonoBehaviour
 
     private void ModifiersCheck()
     {
-        if (menuManager.modifiers.Count > 0)
+        for(int i = 0; i < menuManager.modifiers.Count; i++)
         {
-            classModifiersText.text = "";
+            modifierText += menuManager.modifiers[i] + ",";
         }
-
-        foreach (var modifier in menuManager.modifiers)
-        {
-            modifierText += modifier.ToString();
-            switch (modifier)
-            {
-                case 1:
-                    {
-                        modifierText += "Kahoot,";
-                        classModifiersText.text = "-Kahoot\n";
-                        break;
-                    }
-            }
-        }
+        PlayerPrefs.SetString("SelectedLessonComponents", modifierText);
     }
 }
