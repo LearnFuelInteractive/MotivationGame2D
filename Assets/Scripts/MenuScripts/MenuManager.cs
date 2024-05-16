@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     public int classLayout = 0;
 
     // Class modifiers
-    public List<int> modifiers = new();
+    public List<string> modifiers = new();
 
     // Start is called before the first frame update
     void Start()
