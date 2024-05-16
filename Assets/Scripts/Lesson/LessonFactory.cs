@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class LessonFactory : ScriptableObject
 {
+
+    private LessonComponentFactory _factory = ScriptableObject.CreateInstance<LessonComponentFactory>();
     public Lesson CreateTheoryLesson()
     {
         Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
@@ -17,6 +19,7 @@ public class LessonFactory : ScriptableObject
         modifiers.Add(CompetenceType.AUTONOMY, 0.3f);
         modifiers.Add(CompetenceType.CONNECTION, 0.3f);
         lesson.modifiers = modifiers;
+        lesson.lessonComponents = _factory.CreateLessonComponentsFromPlayerPrefs();
         return lesson;
 
     }
@@ -30,6 +33,7 @@ public class LessonFactory : ScriptableObject
         modifiers.Add(CompetenceType.AUTONOMY, 0.1f);
         modifiers.Add(CompetenceType.CONNECTION, 0.2f);
         lesson.modifiers = modifiers;
+        lesson.lessonComponents = _factory.CreateLessonComponentsFromPlayerPrefs();
         return lesson;
 
     }
@@ -42,6 +46,7 @@ public class LessonFactory : ScriptableObject
         modifiers.Add(CompetenceType.COMPETENCE, 1f);
         modifiers.Add(CompetenceType.AUTONOMY, 0.5f);
         modifiers.Add(CompetenceType.CONNECTION, 0.2f);
+        lesson.lessonComponents = _factory.CreateLessonComponentsFromPlayerPrefs();
         lesson.modifiers = modifiers;
         return lesson;
 
@@ -55,6 +60,7 @@ public class LessonFactory : ScriptableObject
         modifiers.Add(CompetenceType.COMPETENCE, 0.7f);
         modifiers.Add(CompetenceType.AUTONOMY, 0.3f);
         modifiers.Add(CompetenceType.CONNECTION, 0.9f);
+        lesson.lessonComponents = _factory.CreateLessonComponentsFromPlayerPrefs();
         lesson.modifiers = modifiers;
         return lesson;
 

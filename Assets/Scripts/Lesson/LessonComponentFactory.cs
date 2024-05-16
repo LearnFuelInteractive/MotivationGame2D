@@ -7,7 +7,7 @@ public class LessonComponentFactory : ScriptableObject
 {
 
     //TODO: Keep expanding this as more lesson components are made.
-    public List<LessonComponent> createLessonComponentsFromPlayerPrefs()
+    public List<LessonComponent> CreateLessonComponentsFromPlayerPrefs()
     {
         string[] selectedLessonComponentStrings = PlayerPrefs.GetString("SelectedLessonComponents").Split(',');
         List<LessonComponent> components = new List<LessonComponent>();  
@@ -22,7 +22,7 @@ public class LessonComponentFactory : ScriptableObject
         return components;
     }
 
-    public LessonComponent CreateKahootComponent()
+    private LessonComponent CreateKahootComponent()
     {
         var component = ScriptableObject.CreateInstance<LessonComponent>();
         component.name = "Kahoot";
