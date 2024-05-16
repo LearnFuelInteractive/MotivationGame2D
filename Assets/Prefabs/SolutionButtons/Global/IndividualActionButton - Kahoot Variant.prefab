@@ -181,14 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3134ee2ae316947b195a712de1a05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Kahoot
   confirmChoice:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
   CompetenceType: 1
   StandardValue: 20
-  competenceGrade: 0.6
-  autonomyGrade: 0
-  connectionGrade: 0
+  TimeNeeded: 10
   Mediator: {fileID: 0}
+  SolutionType: Standard

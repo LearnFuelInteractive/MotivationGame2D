@@ -1053,6 +1053,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4656290064913365391, guid: 1eee0077e1285d345ad254ae43527feb, type: 3}
+      propertyPath: Name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656290064913365391, guid: 1eee0077e1285d345ad254ae43527feb, type: 3}
+      propertyPath: SolutionType
+      value: Kahoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656290064913365391, guid: 1eee0077e1285d345ad254ae43527feb, type: 3}
       propertyPath: confirmChoice.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
