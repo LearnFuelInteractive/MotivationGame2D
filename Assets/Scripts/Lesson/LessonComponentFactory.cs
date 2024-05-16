@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LessonComponentFactory : ScriptableObject
+public class LessonComponentFactory
 {
 
     //TODO: Keep expanding this as more lesson components are made.
@@ -24,12 +24,7 @@ public class LessonComponentFactory : ScriptableObject
 
     private LessonComponent CreateKahootComponent()
     {
-        var component = ScriptableObject.CreateInstance<LessonComponent>();
-        component.name = "Kahoot";
-        component.modifiers.Add(CompetenceType.CONNECTION, 0.4f);
-        component.modifiers.Add(CompetenceType.COMPETENCE, 0.8f);
-        component.modifiers.Add(CompetenceType.AUTONOMY, 0.1f);
-        return component;
+        return new LessonComponent("Kahoot", 0.8f, 0.1f, 0.4f);
 
     }
 }

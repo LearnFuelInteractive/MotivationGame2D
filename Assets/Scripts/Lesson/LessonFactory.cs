@@ -6,13 +6,13 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class LessonFactory : ScriptableObject
+public class LessonFactory
 {
 
-    private LessonComponentFactory _factory = ScriptableObject.CreateInstance<LessonComponentFactory>();
+    private LessonComponentFactory _factory = new LessonComponentFactory(); 
     public Lesson CreateTheoryLesson()
     {
-        Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
+        Lesson lesson = new Lesson();
         lesson.name = "Theory";
         var modifiers = new Dictionary<CompetenceType, float>();
         modifiers.Add(CompetenceType.COMPETENCE, 0.8f);
@@ -26,7 +26,7 @@ public class LessonFactory : ScriptableObject
 
     public Lesson CreateCollegeLesson()
     {
-        Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
+        Lesson lesson = new Lesson();
         lesson.name = "College";
         var modifiers = new Dictionary<CompetenceType, float>();
         modifiers.Add(CompetenceType.COMPETENCE, 0.8f);
@@ -40,7 +40,7 @@ public class LessonFactory : ScriptableObject
 
     public Lesson CreatePracticalLesson()
     {
-        Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
+        Lesson lesson = new Lesson();
         lesson.name = "Practical";
         var modifiers = new Dictionary<CompetenceType, float>();
         modifiers.Add(CompetenceType.COMPETENCE, 1f);
@@ -54,7 +54,7 @@ public class LessonFactory : ScriptableObject
 
     public Lesson CreateGroupLesson()
     {
-        Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
+        Lesson lesson = new Lesson();
         lesson.name = "Group";
         var modifiers = new Dictionary<CompetenceType, float>();
         modifiers.Add(CompetenceType.COMPETENCE, 0.7f);
