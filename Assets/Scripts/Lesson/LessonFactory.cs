@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class LessonFactory : ScriptableObject
 {
-    public Lesson createTheoryLesson()
+    public Lesson CreateTheoryLesson()
     {
         Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
         lesson.name = "Theory";
@@ -21,7 +21,7 @@ public class LessonFactory : ScriptableObject
 
     }
 
-    public Lesson createCollegeLesson()
+    public Lesson CreateCollegeLesson()
     {
         Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
         lesson.name = "College";
@@ -34,7 +34,7 @@ public class LessonFactory : ScriptableObject
 
     }
 
-    public Lesson createPracticalLesson()
+    public Lesson CreatePracticalLesson()
     {
         Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
         lesson.name = "Practical";
@@ -47,10 +47,10 @@ public class LessonFactory : ScriptableObject
 
     }
 
-    public Lesson createGroupLesson()
+    public Lesson CreateGroupLesson()
     {
         Lesson lesson = ScriptableObject.CreateInstance<Lesson>();
-        lesson.name = "Practical";
+        lesson.name = "Group";
         var modifiers = new Dictionary<CompetenceType, float>();
         modifiers.Add(CompetenceType.COMPETENCE, 0.7f);
         modifiers.Add(CompetenceType.AUTONOMY, 0.3f);
@@ -58,5 +58,21 @@ public class LessonFactory : ScriptableObject
         lesson.modifiers = modifiers;
         return lesson;
 
+    }
+
+    public Lesson CreateLessonWithPlayerPrefs()
+    {
+        string chosenLessonName = PlayerPrefs.GetString("SelectedClassType");
+        switch (chosenLessonName)
+        {
+            case "Theory": return CreateTheoryLesson();
+            case "College": return CreateCollegeLesson();
+            case "Practical": return CreatePracticalLesson();
+            case "Group": return CreateGroupLesson();
+
+
+        }
+
+        return null;
     }
 }
