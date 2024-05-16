@@ -27,15 +27,19 @@ namespace Assets.Scripts.Solution.GlobalSolutions
             }
 
             // Apply groups modifier.
-            // Apply the effect.
             Problem problem = character.currentProblem;
             problem.Affect();
             // All of the values
             float acceptanceCriteria = problem.AcceptanceCriteria;
             float otherModifiers = ApplyClassroomModifiers();
             float personaModifier = character.persona.GetCompetence(CompetenceType);
+            float personaDefinitveModifier = ApplyPersonaModifiers(personaModifier);
+
+            // If percentage 0 - 100, it will divide it to single 
+            // If personal skill value is high, the modifier should be minimal
+
             // Effectiveness is reduced to 75 percent of its original strength.
-            float answer = StandardValue + (1 + otherModifiers / 100.0f) + (1 + (1 - personaModifier)) * 0.75f;
+            float answer = StandardValue * otherModifiers * personaDefinitveModifier * ApplyGlobalModifier();
 
             return CheckAcceptanceCriteria(acceptanceCriteria, answer);
         }
@@ -54,6 +58,17 @@ namespace Assets.Scripts.Solution.GlobalSolutions
         {
             // Here comes the modifier.
             return 0.0f;
+        }
+
+        private float ApplyPersonaModifiers(float personaModifier)
+        {
+            // Factor should not be higher then 50 percent.
+            return 1.0f + (personaModifier / 2.0f);
+        }
+
+        private float ApplyGlobalModifier()
+        {
+            return 0.75f;
         }
     }
 }
