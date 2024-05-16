@@ -10,10 +10,15 @@ public class EndScreenScript : MonoBehaviour
     {
         var choices = PlayerPrefs.GetString(choicesKey);
         var choicesList = choices.Split(',');
-        foreach (var choice in choicesList) 
+        for (var i = 0; i < choicesList.Length - 1; i++)
         {
-            choicesText.text += choice + "\n";
+            choicesText.text += $"{i + 1}. " + choicesList[i] + "\n";
         }
+        //foreach (var choice in choicesList) 
+        //{
+        //    choicesText.text += $"{count}. " + choice + "\n";
+        //    count++;
+        //}
     }
 
     // Update is called once per frame
