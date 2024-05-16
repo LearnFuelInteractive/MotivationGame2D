@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_text
-      value: Schreeuw
+      value: Schreeuwen
       objectReference: {fileID: 0}
     - target: {fileID: 8282181477501884358, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_Texture
@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000005722046
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -177,11 +177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3134ee2ae316947b195a712de1a05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Schreeuwen
   confirmChoice:
     m_PersistentCalls:
       m_Calls: []
   TargetedStudent: {fileID: 0}
-  competenceGrade: 0.6
-  autonomyGrade: 0
-  connectionGrade: 0
+  CompetenceType: 0
+  StandardValue: 40
+  TimeNeeded: 10
+  Mediator: {fileID: 0}
