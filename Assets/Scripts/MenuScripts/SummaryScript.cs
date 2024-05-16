@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -110,6 +111,8 @@ public class SummaryScript : MonoBehaviour
 
     private void ModifiersCheck()
     {
+
+        string modifyText = "";
         //for(int i = 0; i < menuManager.modifiers.Count; i++)
         //{
         //    modifierText += menuManager.modifiers[i] + ",";
@@ -118,10 +121,10 @@ public class SummaryScript : MonoBehaviour
         foreach(string modifier in menuManager.modifiers)
         {
             Debug.Log(modifier);
-            modifierText += modifier + ",";
+            modifyText += modifier + ",";
+            modifierText += modifier + "-";
         }
-
-        Debug.Log("MODIFIER TEXT: " + modifierText);
-        PlayerPrefs.SetString("SelectedLessonComponents", modifierText);
+        classModifiersText.text = modifyText;
+        PlayerPrefs.SetString("SelectedLessonComponents", modifyText);
     }
 }
