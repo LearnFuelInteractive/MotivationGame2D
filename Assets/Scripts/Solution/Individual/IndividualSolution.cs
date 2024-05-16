@@ -88,10 +88,9 @@ public class IndividualSolution : ASolution
     private float ApplyClassroomModifiers()
     {
         // Here comes the modifier.
-        // var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
+        var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
 
-        // float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.0f);
-        float relevantFactor = 1.0f;
+        float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.0f);;
         return relevantFactor / 2;
     }
 

@@ -14,11 +14,13 @@ namespace Assets.Scripts.Solution.GlobalSolutions
     {
         // For now a relation to level manager.
         public IMediator Mediator;
+        public LessonFactory LessonFactory;
 
         public string SolutionType = "Standard";
 
         private void Start()
         {
+            LessonFactory = new LessonFactory();
             var mediator = FindFirstObjectByType<LevelMediator>();
             if (mediator != null)
             {

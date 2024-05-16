@@ -62,10 +62,9 @@ namespace Assets.Scripts.Solution.GlobalSolutions
         private float ApplyClassroomModifiers()
         {
             // Here comes the modifier.
-            // var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
+            var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
 
-            // float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.0f);
-            float relevantFactor = 0.5f;
+            float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.1f);
             return relevantFactor / 2;
         }
 
