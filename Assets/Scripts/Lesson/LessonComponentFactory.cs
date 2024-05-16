@@ -10,21 +10,11 @@ public class LessonComponentFactory
     public List<LessonComponent> CreateLessonComponentsFromPlayerPrefs()
     {
         string[] selectedLessonComponentStrings = PlayerPrefs.GetString("SelectedLessonComponents").Split(',');
-        List<LessonComponent> components = new List<LessonComponent>();  
-        foreach (string str in selectedLessonComponentStrings)
+        List<LessonComponent> lessonComponentss = new List<LessonComponent>();  
+        foreach(string str in selectedLessonComponentStrings)
         {
-            switch (str)
-            {
-                case "Kahoot": components.Add(CreateKahootComponent());
-                    break;
-            }
+            lessonComponentss.Add(new LessonComponent(str));
         }
-        return components;
-    }
-
-    private LessonComponent CreateKahootComponent()
-    {
-        return new LessonComponent("Kahoot", 0.8f, 0.1f, 0.4f);
-
+        return lessonComponentss;
     }
 }
