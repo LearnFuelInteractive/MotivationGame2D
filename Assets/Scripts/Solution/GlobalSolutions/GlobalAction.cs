@@ -15,6 +15,8 @@ namespace Assets.Scripts.Solution.GlobalSolutions
         // For now a relation to level manager.
         public IMediator Mediator;
 
+        public string SolutionType = "Standard";
+
         private void Start()
         {
             var mediator = FindFirstObjectByType<LevelMediator>();

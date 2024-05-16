@@ -32,7 +32,7 @@ namespace Assets.Scripts.Solution.GlobalSolutions
             problem.Affect();
             // All of the values
             float acceptanceCriteria = problem.AcceptanceCriteria;
-            float otherModifiers = 0.0f;
+            float otherModifiers = ApplyClassroomModifiers();
             float personaModifier = character.persona.GetCompetence(CompetenceType);
             // Effectiveness is reduced to 75 percent of its original strength.
             float answer = StandardValue + (1 + otherModifiers / 100.0f) + (1 + (1 - personaModifier)) * 0.75f;
@@ -48,6 +48,12 @@ namespace Assets.Scripts.Solution.GlobalSolutions
         public override void ConfirmAction()
         {
             confirmChoice.Invoke();
+        }
+
+        private float ApplyClassroomModifiers()
+        {
+            // Here comes the modifier.
+            return 0.0f;
         }
     }
 }

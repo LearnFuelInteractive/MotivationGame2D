@@ -20,12 +20,6 @@ namespace Assets.Scripts.ProblemClass
         public string ProblemName = "Bored student";
         public string ProblemExplanation = "Default value";
 
-        // Minimal and maximum values;
-        public float MinimumValue = 10.0f;
-        public float MaximumValue = 60.0f;
-
         public abstract void Affect();
-        public abstract void GenerateAcceptanceCriteria();
-
     }
 }
