@@ -9,6 +9,8 @@ namespace Assets.Scripts.Popup
 {
     public class GlobalActionDialog : IActionDialog
     {
+        // P.S. Voeg in Unity, handmatig alle problemen toepasbaar voor het level.
+        public List<GlobalAction> solutions;
         // Relation to mediator class
         // For now a relation to level manager.
         public LevelMediator Mediator;

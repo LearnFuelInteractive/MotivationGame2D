@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine;
 using Assets.Scripts.ProblemClass;
 using System.Collections.Generic;
+using System.Linq;
+using Assets.Scripts.Solution.GlobalSolutions;
 
 namespace Assets.Scripts.Popup
 {
@@ -10,6 +12,9 @@ namespace Assets.Scripts.Popup
     {
         public TextMeshProUGUI StudentName;
         public TextMeshProUGUI ProblemOfStudent;
+
+        // P.S. Voeg in Unity, handmatig alle problemen toepasbaar voor het level.
+        public List<IndividualSolution> solutions;
 
         public Student Student;
         // Only for Individual action: The problem this dialog is called upon
@@ -21,6 +26,11 @@ namespace Assets.Scripts.Popup
         // Further action.
         // When player has clicked upon problem, a dialog screen should be spawned and all other elements should be blacked out.
         // Focus should be aimed at player, student and dialog.
+        private void Start()
+        {
+            var list = FindObjectsOfType<IndividualSolution>().ToList();
+            solutions = list;
+        }
 
         public override void ShowPopup()
         {
