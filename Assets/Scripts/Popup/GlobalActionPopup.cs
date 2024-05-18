@@ -10,7 +10,6 @@ namespace Assets.Scripts.Popup
     {
         public bool hasOpened;
 
-        public GlobalActionSpawn parent;
         private GlobalActionDialog dialog;
 
         public ProblemManager problemManager;
@@ -37,8 +36,6 @@ namespace Assets.Scripts.Popup
             dialog.ShowPopupDialog();
             
             gameObject.SetActive(false);
-            parent.HasEntered = hasOpened;
-            
         }
         
         private void Start()
