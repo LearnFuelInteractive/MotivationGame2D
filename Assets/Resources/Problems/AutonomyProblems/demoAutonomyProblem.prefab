@@ -50,5 +50,5 @@ MonoBehaviour:
   AcceptanceCriteria: 0
   ProblemName: Autonomy Demo Problem
   ProblemExplanation: Default value
-  MinimumValue: 10
-  MaximumValue: 50
+  ProblemResolvedText: Deze situatie heb je goed aangepakt (Autonomie)
+  ProblemNotResolvedText: Dit bleek niet te werken.

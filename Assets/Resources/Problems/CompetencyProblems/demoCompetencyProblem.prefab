@@ -50,5 +50,5 @@ MonoBehaviour:
   AcceptanceCriteria: 0
   ProblemName: Demo Competency Problem
   ProblemExplanation: Default value
-  MinimumValue: 10
-  MaximumValue: 40
+  ProblemResolvedText: Deze situatie heb je goed aangepakt (Competence)
+  ProblemNotResolvedText: Dit bleek niet te werken.
