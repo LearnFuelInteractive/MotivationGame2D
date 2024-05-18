@@ -3,7 +3,6 @@ using Assets.Scripts.Solution.GlobalSolutions;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 namespace Assets.Scripts.Popup
 {
