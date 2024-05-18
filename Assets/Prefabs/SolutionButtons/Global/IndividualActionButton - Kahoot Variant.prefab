@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchorMin.x
@@ -34,11 +34,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 207
       objectReference: {fileID: 0}
     - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1317570605127368779, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,6 +100,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2354421953090475340, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fec3c72f270dd5c4ab0c3789fdf63855, type: 3}
     - target: {fileID: 4105549688352964260, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_Name
       value: IndividualActionButton - Kahoot Variant
@@ -110,51 +126,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6244099682898351943, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -0
+      value: -69.8721
       objectReference: {fileID: 0}
     - target: {fileID: 6244099682898351943, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -21.7478
+      value: -7.5062
       objectReference: {fileID: 0}
     - target: {fileID: 6244099682898351943, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 27.063927
       objectReference: {fileID: 0}
     - target: {fileID: 6244099682898351943, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29.800003
+      value: 0.2166977
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_text
-      value: Kahoot
+      value: Kahoot draaien
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_fontSize
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_fontSizeBase
-      value: 8
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402132306354910746, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8282181477501884358, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 52ec208fb1f171246b443d5e71adae6e, type: 3}
     - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 109.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 62.5548
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.31903234
+      value: 0.40644723
       objectReference: {fileID: 0}
     - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.31903234
+      value: 0.40644723
       objectReference: {fileID: 0}
     - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.31903234
+      value: 0.40644723
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -71.4
       objectReference: {fileID: 0}
     - target: {fileID: 9194416861588674885, guid: a890f63025865944d96993dcf832a44a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000054536
+      value: -0.0000053197
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -180,14 +212,26 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d3134ee2ae316947b195a712de1a05e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier:
-  Name: Kahoot
+  m_EditorClassIdentifier: 
+  Name: 
   confirmChoice:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Assets.Scripts.Popup.IPopup, Assembly-CSharp
+        m_MethodName: HidePopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TargetedStudent: {fileID: 0}
   CompetenceType: 1
   StandardValue: 20
   TimeNeeded: 10
   Mediator: {fileID: 0}
-  SolutionType: Standard
+  SolutionType: Kahoot
