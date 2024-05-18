@@ -90,7 +90,7 @@ public class IndividualSolution : ASolution
         // Here comes the modifier.
         var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
 
-        float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.0f);;
+        float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.0f);
         return relevantFactor / 2;
     }
 

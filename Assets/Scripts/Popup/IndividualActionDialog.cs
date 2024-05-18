@@ -30,6 +30,9 @@ namespace Assets.Scripts.Popup
         {
             var list = FindObjectsOfType<IndividualSolution>().ToList();
             solutions = list;
+            Debug.LogWarning("Start solution Count :" + solutions.Count);
+            UpdateSolution();
+            ChangeText();
         }
 
         public override void ShowPopup()
@@ -52,7 +55,11 @@ namespace Assets.Scripts.Popup
 
         public override void UpdateSolution()
         {
-            solutions.ForEach(s => s.TargetedStudent = Student);
+            Debug.LogWarning("Count :" + solutions.Count);
+            solutions.ForEach(s => { 
+                Debug.LogWarning("Updated solution with student: "+ Student.Name);
+                s.TargetedStudent = Student; 
+            });
         }
 
         public void ChangeText()
