@@ -19,6 +19,9 @@ namespace Assets.Scripts.ProblemClass
         public float AcceptanceCriteria = 55;
         public string ProblemName = "Bored student";
         public string ProblemExplanation = "Default value";
+        public string ProblemResolvedText = "Default value";
+        public string ProblemNotResolvedText = "Default value";
+
 
         public abstract void Affect();
     }

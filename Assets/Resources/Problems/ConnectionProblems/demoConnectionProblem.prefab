@@ -50,5 +50,5 @@ MonoBehaviour:
   AcceptanceCriteria: 0
   ProblemName: Connection Demo Problem
   ProblemExplanation: Default value
-  MinimumValue: 30
-  MaximumValue: 70
+  ProblemResolvedText: Deze situatie heb je goed aangepakt (Connection)
+  ProblemNotResolvedText: Dit bleek niet te werken.
