@@ -13,18 +13,21 @@ public class ClassLayoutScript : MonoBehaviour
     {
         Debug.Log("Normal");
         menuManager.classLayout = 1;
+        ForwardToModifiers();
     }
 
     public void SelectGrouped()
     {
         Debug.Log("Grouped");
         menuManager.classLayout = 2;
+        ForwardToModifiers();
     }
 
     public void SelectSpaced()
     {
         Debug.Log("Spaced");
         menuManager.classLayout = 3;
+        ForwardToModifiers();
     }
 
     public void BackToType()
