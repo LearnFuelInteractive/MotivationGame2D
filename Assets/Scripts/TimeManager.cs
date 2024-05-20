@@ -18,7 +18,7 @@ public class TimeManager : MonoBehaviour
     void Start()
     {
         timeText.text = startTime;
-        endTimeText.text = "Class ends: " + endTime;
+        endTimeText.text = "Eindtijd: " + endTime;
         
        // InvokeRepeating(nameof(IncreaseTime), 1 ,1); //test to see if the time increases
     }

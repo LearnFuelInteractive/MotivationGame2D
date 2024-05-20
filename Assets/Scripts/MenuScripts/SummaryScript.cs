@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -51,31 +52,26 @@ public class SummaryScript : MonoBehaviour
             case 1:
                 {
                     classTypeText.text = "-Theorie";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
                     break;
                 }
             case 2:
                 {
                     classTypeText.text = "-Practicum";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "PracticalClassType");
                     break;
                 }
             case 3:
                 {
                     classTypeText.text = "-Hoorcollege";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "CollegeClassType");
                     break;
                 }
             case 4:
                 {
                     classTypeText.text = "-Groepsopdracht";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "GroupClassType");
                     break;
                 }
             default:
                 {
                     classTypeText.text = "-Theorie";
-                    PlayerPrefs.SetString(selectedClassTypeKey, "TheoryClassType");
                     break;
                 }
         }
@@ -115,23 +111,20 @@ public class SummaryScript : MonoBehaviour
 
     private void ModifiersCheck()
     {
-        if (menuManager.modifiers.Count > 0)
-        {
-            classModifiersText.text = "";
-        }
 
-        foreach (var modifier in menuManager.modifiers)
+        string modifyText = "";
+        //for(int i = 0; i < menuManager.modifiers.Count; i++)
+        //{
+        //    modifierText += menuManager.modifiers[i] + ",";
+        //}
+
+        foreach(string modifier in menuManager.modifiers)
         {
-            modifierText += modifier.ToString();
-            switch (modifier)
-            {
-                case 1:
-                    {
-                        modifierText += "Kahoot,";
-                        classModifiersText.text = "-Kahoot\n";
-                        break;
-                    }
-            }
+            Debug.Log(modifier);
+            modifyText += modifier + ",";
+            modifierText += modifier + "-";
         }
+        classModifiersText.text = modifyText;
+        PlayerPrefs.SetString("SelectedLessonComponents", modifyText);
     }
 }

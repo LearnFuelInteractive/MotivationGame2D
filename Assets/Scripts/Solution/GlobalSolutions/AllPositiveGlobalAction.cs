@@ -1,6 +1,8 @@
 ﻿using Assets.Scripts.Characters;
 using Assets.Scripts.ProblemClass;
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Scripts.Solution.GlobalSolutions
@@ -27,15 +29,22 @@ namespace Assets.Scripts.Solution.GlobalSolutions
             }
 
             // Apply groups modifier.
-            // Apply the effect.
             Problem problem = character.currentProblem;
             problem.Affect();
             // All of the values
             float acceptanceCriteria = problem.AcceptanceCriteria;
-            float otherModifiers = 0.0f;
+            
             float personaModifier = character.persona.GetCompetence(CompetenceType);
+            // Example 0.3
+            float classRoomModifier = ApplyClassroomModifiers();
+            // Example 0.4
+            float personaDefinitveModifier = ApplyPersonaModifiers(personaModifier);
+
+            // If percentage 0 - 100, it will divide it to single 
+            // If personal skill value is high, the modifier should be minimal
+
             // Effectiveness is reduced to 75 percent of its original strength.
-            float answer = StandardValue + (1 + otherModifiers / 100.0f) + (1 + (1 - personaModifier)) * 0.75f;
+            float answer = StandardValue * (1 + classRoomModifier + personaDefinitveModifier) * ApplyGlobalModifier();
 
             return CheckAcceptanceCriteria(acceptanceCriteria, answer);
         }
@@ -48,6 +57,26 @@ namespace Assets.Scripts.Solution.GlobalSolutions
         public override void ConfirmAction()
         {
             confirmChoice.Invoke();
+        }
+
+        private float ApplyClassroomModifiers()
+        {
+            // Here comes the modifier.
+            var lesson = LessonFactory.CreateLessonWithPlayerPrefs();
+
+            float relevantFactor = lesson.modifiers.GetValueOrDefault(CompetenceType, 0.1f);
+            return relevantFactor / 2;
+        }
+
+        private float ApplyPersonaModifiers(float personaModifier)
+        {
+            // Factor should not be higher then 50 percent.
+            return personaModifier / 2.0f;
+        }
+
+        private float ApplyGlobalModifier()
+        {
+            return 0.75f;
         }
     }
 }

@@ -1,3 +1,5 @@
+using Assets.Scripts.Other;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,29 +12,14 @@ public class ClassTypeScript : MonoBehaviour
 
     public MenuManager menuManager;
 
-    public void SelectTheory()
+    public void Selected(string lessonNameAndNumberCSV)
     {
-        Debug.Log("Theory");
-        menuManager.classType = 1;
+        Debug.Log("CHOSEN LESSON TYPE IN MENU: " + lessonNameAndNumberCSV.Split(',')[0]);
+        PlayerPrefs.SetString("SelectedClassType", lessonNameAndNumberCSV.Split(',')[0]);  
+        menuManager.classType = int.Parse(lessonNameAndNumberCSV.Split(',')[1]);
+        ForwardToLayout();
     }
 
-    public void SelectPractical()
-    {
-        Debug.Log("Practical");
-        menuManager.classType = 2;
-    }
-
-    public void SelectCollege()
-    {
-        Debug.Log("College");
-        menuManager.classType = 3;
-    }
-
-    public void SelectGroup()
-    {
-        Debug.Log("Group");
-        menuManager.classType = 4;
-    }
 
     public void BackToTutorial()
     {

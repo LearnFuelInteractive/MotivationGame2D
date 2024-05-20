@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProblemIcon: {fileID: 6923509395146575482, guid: 894f8d09697c36b449786d528de15edb, type: 3}
   RelevantStudent: {fileID: 0}
-  CompetenceType: 0
+  CompetenceType: 2
   AcceptanceCriteria: 0
   ProblemName: Connection Demo Problem
   ProblemExplanation: Default value
-  MinimumValue: 30
-  MaximumValue: 70
+  ProblemResolvedText: Deze situatie heb je goed aangepakt (Connection)
+  ProblemNotResolvedText: Dit bleek niet te werken.
