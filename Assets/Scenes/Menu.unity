@@ -2211,15 +2211,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Lopen met WASD of de peiltoetsen.
+  m_text: '- Loop met de WASD toetsen of de pijltjestoetsen.
 
 
-    - Klik op de popup van een student
-    om met de individuele student te interacteren.
+    - Klik op de popup
+    van een student om met de student een interactie te starten.
 
 
-    Druk de Q toets in om het
-    menu met interacties voor de hele klas te openen.
+    - Druk op
+    Q om het menu met globale interacties voor de hele klas te openen.
+
+
+    - Druk
+    op P om het spel te pauzeren
 
 '
   m_isRightToLeft: 0
@@ -8245,7 +8249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1792079827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9444,7 +9448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2059880525
 RectTransform:
   m_ObjectHideFlags: 0
